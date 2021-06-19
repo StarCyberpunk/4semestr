@@ -1,0 +1,1277 @@
+
+<!-- saved from url=(0063)http://www.physchem.chimfak.sfedu.ru/Source/NumMethods/ODE.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+
+<meta http-equiv="Content-Language" content="ru">
+<meta name="Author" content="Igor N. Shcherbakov">
+<meta name="description" content="Численные методы и программирование. Численное решение обыкновенных дифференциальных уравнений 1-го порядка. ">
+<meta name="keywords" content="ОДУ задача Коши начальная численное решение задача Эйлер Гюн Рунге Кутта Адамс прогноз и коррекция 1-го 2-го порядка многошаговый одношаговый сетка интегрирования">
+<title>Кафедра физхимии ЮФУ(РГУ) - "Численные методы и программирование"</title>
+<!--<base target="_top">--><base href="." target="_top">
+<link rel="shortcut icon" href="http://www.physchem.chimfak.sfedu.ru/favicon.ico">
+<link rel="stylesheet" type="text/css" href="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/num.css">
+<link href="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/tablestyles.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+.auto-style1 {
+	font-family: "Times New Roman", Times, serif;
+	font-size: medium;
+	font-weight: normal;
+	letter-spacing: inherit;
+}
+.auto-style2 {
+	border-width: 1px;
+}
+.auto-style3 {
+	border-width: 1px;
+	font-family: "Times New Roman", Times, serif;
+	font-size: medium;
+	font-style: italic;
+	font-weight: normal;
+	letter-spacing: inherit;
+}
+</style>
+</head>
+
+<body topmargin="4" bgcolor="#C0C0C0" vlink="#000080">
+
+<div align="center">
+  <center>
+  </center>
+	<table border="0" width="900" height="512" cellspacing="0" cellpadding="0" background="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/back_nb.gif" class="TabPage">
+    <tbody>
+  <tr class="EvenRow">
+      <td width="160" height="434" valign="top">
+
+      <p class="menu_1"><i><a href="http://www.physchem.chimfak.rsu.ru/">Главная
+      страница</a><br>
+      &nbsp;<br>
+      &nbsp;<br>
+      </i>      </p>
+      <p class="menu_4"><b><a href="http://www.physchem.chimfak.sfedu.ru/Sources.html">УЧЕБНЫЕ<br>
+      МАТЕРИАЛЫ</a>
+      </b>      </p>
+      <p class="menu_4"><b>
+      <a href="http://www.physchem.chimfak.sfedu.ru/Source/num_prog.html">ПРОГРАММА<br>
+      КУРСА</a></b>      </p>
+      <p class="menu_4"><b><a href="http://www.physchem.chimfak.sfedu.ru/Source/num_lect.html">КОНСПЕКТЫ<br>
+      ЛЕКЦИЙ</a>&nbsp;&nbsp; <img border="0" src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/newres.gif" width="12" height="11"></b>      </p>
+        <p class="menu_4"><b><a href="http://www.physchem.chimfak.sfedu.ru/Source/NumMethods/num_prax.php">ПРАКТИЧЕСКИЕ<br>
+        ЗАНЯТИЯ</a></b>      </p>
+        <p class="menu_4"><b>
+      <a href="http://www.physchem.chimfak.sfedu.ru/Source/num_exam.html">ВОПРОСЫ К<br>
+      ЗАЧЁТУ</a></b>      </p>
+      <p class="menu_4"><b>
+      <a href="http://www.physchem.chimfak.sfedu.ru/Source/num_prog.html#books">
+      РЕКОМЕНДУЕМАЯ<br>
+      ЛИТЕРАТУРА</a></b>      </p>      
+      <p class="menu_4"><!--begin of Rambler's Top100 code -->
+ <a href="http://top100.rambler.ru/top100/"><img src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/top100.cnt" width="1" height="1" border="0"></a>
+<!-- Rating@Mail.ru counter -->
+<script type="text/javascript">//<![CDATA[
+var a='',js=10;try{a+=';r='+escape(document.referrer);}catch(e){}try{a+=';j='+navigator.javaEnabled();js=11;}catch(e){}
+try{s=screen;a+=';s='+s.width+'*'+s.height;a+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth);js=12;}catch(e){}
+try{if(typeof((new Array).push('t'))==="number")js=13;}catch(e){}
+try{(new Image()).src='http://dd.c8.b1.a2.top.mail.ru/counter?id=2198990;js='+js+a+';rand='+Math.random();}catch(e){}//]]></script>
+<noscript><a href="http://top.mail.ru/jump?from=2198990"><img src="http://dd.c8.b1.a2.top.mail.ru/counter?js=na;id=2198990"
+style="border:0;" height="1" width="1" alt="Рейтинг@Mail.ru" /></a></noscript>
+<!-- //Rating@Mail.ru counter -->
+
+      </p>
+	  <p class="menu_4">Одношаговые методы</p>
+	  <p class="menu_4"><a href="http://www.physchem.chimfak.sfedu.ru/Source/NumMethods/ODE.html#Euler">Метод Эйлера</a><br><a href="http://www.physchem.chimfak.sfedu.ru/Source/NumMethods/ODE.html#Hune">
+	  Метод Гюна</a><br><a href="http://www.physchem.chimfak.sfedu.ru/Source/NumMethods/ODE.html#Runge">Методы Рунге-Кутты</a></p>
+	  <p class="menu_4">Многошаговые методы</p>
+	  <p class="menu_4"><a href="http://www.physchem.chimfak.sfedu.ru/Source/NumMethods/ODE.html#Adams">Метод Адамса</a><br><a href="http://www.physchem.chimfak.sfedu.ru/Source/NumMethods/ODE.html#Prognoz">
+	  Метод прогноза и коррекции</a></p>
+	  <p class="menu_4"><a href="http://www.physchem.chimfak.sfedu.ru/Source/NumMethods/ODE.html#ODE_system">Решение задачи Коши для систем ОДУ первого порядка</a></p>
+	  <p class="menu_4"><a href="http://www.physchem.chimfak.sfedu.ru/Source/NumMethods/ODE.html#ODE_high">Решеиие задачи Коши ОДУ высших 
+	  порядков</a></p>
+	  </td>
+      <td width="740" height="434" valign="top">
+        <p class="top">&nbsp;<br>
+        <b><i>Кафедра физхимии ЮФУ (РГУ)<br>
+        ЧИСЛЕННЫЕ МЕТОДЫ И
+        ПРОГРАММИРОВАНИЕ<br>
+        Материалы к лекционному
+        курсу<br>
+        Лектор – ст. преп. <a href="http://www.physchem.chimfak.sfedu.ru/Private/Shcherbakov.html">Щербаков
+        И.Н.</a></i></b></p>
+  	  <h1>РЕШЕНИЕ
+    ОБЫКНОВЕННЫХ ДИФФЕРЕНЦИАЛЬНЫХ УРАВНЕНИЙ </h1>
+  <p class="top2"><b>Постановка задачи</b></p>
+  <p>При решении научных и
+    инженерно-технических задач часто бывает необходимо математически описать
+    какую-либо динамическую систему. Лучше всего это делать в виде дифференциальных
+    уравнений (<b>ДУ</b>) или системы дифференциальных уравнений. Наиболее часто
+    они такая задача возникает при решении проблем, связанных с моделированием кинетики
+    химических реакций и различных явлений переноса (тепла, массы, импульса) –
+    теплообмена, перемешивания, сушки, адсорбции, при описании движения макро- и
+    микрочастиц. </p>
+  <p><i><a name="ODE"></a>Обыкновенным
+    дифференциальным уравнением</i> (ОДУ) n-го порядка называется следующее уравнение, которое содержит
+    одну или несколько производных от искомой функции y(x):</p>
+  <p><img width="192" height="25" src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/image002.gif">, здесь <i>y<sup>(n)</sup></i> обозначает производную порядка n некоторой функции y(x), x – это независимая переменная.</p>
+  <p>В ряде случаев дифференциальное уравнение можно преобразовать
+    к виду, в котором старшая производная выражена в явном виде. Такая форма записи
+    называется уравнением, <i>разрешенным
+    относительно старшей производной</i> (при этом в правой части уравнения старшая
+    производная отсутствует):</p>
+  <p class="MTDisplayEquation"><img width="177" height="25" src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/image004.gif">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a name="6-1"></a>(6.1)</p>
+  <p>Именно такая форма записи принята в качестве <em>стандартной</em> при
+    рассмотрении численных методов решения ОДУ.</p>
+  <p><i>Линейным
+    дифференциальным уравнением</i> называется уравнение, линейное относительно
+    функции y(x) и всех ее производных.</p>
+  <p>Например, ниже приведены линейные ОДУ первого и второго порядков</p>
+  <p>&nbsp;<img width="99" height="25" src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/image006.gif">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img width="180" height="45" src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/image008.gif"></p>
+  <p><i><a name="ODE_solv"></a>Решением обыкновенного
+    дифференциального уравнения</i> называется такая функция y(x), которая при любых х удовлетворяет этому уравнению в
+    определенном конечном или бесконечном интервале. Процесс решения
+    дифференциального уравнения называют <i>интегрированием
+    дифференциального уравнения</i>.</p>
+  <p><i>Общее решение ОДУ</i> <span class="Var">n</span>-го порядка содержит n произвольных
+    констант <span class="Var">C<sub>1</sub></span>, <span class="Var">C<sub>2</sub></span>, …, <span class="Var">C<sub>n</sub></span> </p>
+  <p><img width="171" height="24" src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/image010.gif"> </p>
+  <p>Это очевидно следует из того, что неопределенный интеграл
+    равен первообразной подынтегрального выражения плюс константа интегрирования</p>
+  <p><img width="144" height="32" src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/image012.gif"></p>
+  <p>Так как для решения ДУ <span class="Var">n</span>-го порядка необходимо провести <span class="Var">n</span> интегрирований,
+    то в общем решении появляется <span class="Var">n</span> констант
+    интегрирования.</p>
+  <p><i>Частное решение</i> ОДУ
+    получается из общего, если константам интегрирования придать некоторые значения,
+    определив некоторые дополнительные
+    условия, количество которых позволяет вычислить все неопределенные
+    константы интегрирования.</p>
+  <p><b><i>Точное (аналитическое) решение</i></b> (общее или частное) дифференциального уравнения подразумевает получение
+    искомого решения (функции y(x)) в виде выражения от
+    элементарных функций. Это возможно далеко не всегда даже для уравнений первого
+    порядка.</p>
+  <p><b><i>Численное решение</i></b> ДУ (частное)
+    заключается в вычислении функции <span class="Var">y(x)</span> и ее
+    производных в некоторых заданных точках <img src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/image014.gif" width="80" height="24" align="absmiddle">, лежащих на определенном отрезке. То есть, фактически,
+    решение ДУ <span class="Var">n</span>-го порядка
+    вида  получается в виде следующей
+    таблицы чисел (столбец значений старшей производной вычисляется подстановкой значений в уравнение):</p>
+
+  <table border="1" cellspacing="0" cellpadding="0" align="center" width="426" style="table-layout: fixed">
+    <colgroup span="5" align="center" width="100">
+    </colgroup><tbody><tr>
+      <th width="86" bgcolor="#99CCFF"><p>X</p></th>
+      <th width="89" bgcolor="#99CCFF"><p class="tab_2">y</p></th>
+      <th width="77" bgcolor="#99CCFF"><p class="tab_2">y'</p></th>
+      <th width="35" bgcolor="#99CCFF">&nbsp;</th>
+      <th width="127" bgcolor="#99CCFF"><p class="tab_2">y<sup>(n-1)</sup></p></th>
+    </tr>
+    <tr>
+      <td><p class="tab_2">x<sub>1</sub></p></td>
+      <td><p class="tab_2">y(x<sub>1</sub>)</p></td>
+      <td><p class="tab_2">y'(x<sub>1</sub>)</p></td>
+      <td><p class="tab_2">…</p></td>
+      <td><p class="tab_2">y<sup>(n-1)</sup>(x<sub>1</sub>)</p></td>
+    </tr>
+    <tr>
+      <td><p class="tab_2">x<sub>2</sub></p></td>
+      <td><p class="tab_2">y(x<sub>2</sub>)</p></td>
+      <td><p class="tab_2">y'(x<sub>2</sub>)</p></td>
+      <td><p class="tab_2">…</p></td>
+      <td><p class="tab_2">y<sup>(n-1)</sup>(x<sub>2</sub>)</p></td>
+    </tr>
+    <tr>
+      <td><p class="tab_2">&nbsp;</p></td>
+      <td><p class="tab_2">&nbsp;</p></td>
+      <td> <p class="tab_2">&nbsp;</p></td>
+      <td><p class="tab_2">&nbsp;</p></td>
+      <td><p class="tab_2">&nbsp;</p></td>
+    </tr>
+    <tr>
+      <td><p class="tab_2">x<sub>N</sub></p></td>
+      <td><p class="tab_2">y(x<sub>N</sub>)</p></td>
+      <td><p class="tab_2">y'(x<sub>N</sub>)</p></td>
+      <td><p class="tab_2">…</p></td>
+      <td><p class="tab_2">y<sup>(n-1)</sup>(x<sub>N</sub>)</p></td>
+    </tr>
+  </tbody></table>
+  <p>Например,
+    для дифференциального уравнения первого порядка таблица решения будет
+    представлять собой два столбца – <span class="Var">x</span> и <span class="Var">y</span>.</p>
+  <p>Множество значений
+    абсцисс <img src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/image016.gif" width="96" height="28" align="absmiddle">&nbsp;в которых
+    определяется значение функции, &nbsp;называют <i>сеткой</i>, на которой определена функция <span class="Var">y(x)</span>. Сами координаты при этом называют <i>узлами сетки</i>. Чаще всего, для удобства,
+    используются <i>равномерные сетки</i>, в
+    которых разница между соседними узлами постоянна и называется <i>шагом сетки</i> или <i>шагом интегрирования</i> дифференциального уравнения</p>
+  <p><img src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/image018.gif" width="81" height="24" align="absmiddle">&nbsp; &nbsp;&nbsp;или&nbsp;&nbsp; <img src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/image020.gif" width="83" height="24" align="absmiddle">, &nbsp;&nbsp;&nbsp;<span class="Var"><i>i</i> = 1, …, N</span></p>
+  <p>Для определения <i>частного
+    решения</i> необходимо задать дополнительные условия, которые позволят
+    вычислить константы интегрирования. Причем таких условий должно быть ровно <span class="Var">n</span>. Для уравнений первого
+    порядка – одно, для второго - 2 и т.д. В зависимости от способа их задания при
+    решении дифференциальных уравнений существуют три типа задач:</p>
+  <p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b><i><a name="Koshi"></a>Задача Коши (начальная задача):</i></b> Необходимо найти такое <i>частное решение</i> дифференциального уравнения, которое удовлетворяет определенным <i>начальными условиям, заданным в одной точке</i>:</p>
+  <p><img width="329" height="29" src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/image022.gif"> </p>
+  <p>то есть, задано определенное значение независимой переменной <span class="Var">(х<sub>0</sub>)</span>,
+    и значение функции и всех ее производных вплоть до порядка <span class="Var">(n-1)</span> в этой точке. Эта точка <span class="Var">(х<sub>0</sub>)</span>    называется <i>начальной</i>. Например, если
+    решается ДУ 1-го порядка, то начальные условия выражаются в виде пары чисел <span class="Var">(x<sub>0</sub>, y<sub>0</sub>)</span></p>
+  <p><img width="97" height="24" src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/image024.gif"></p>
+  <p>&nbsp;Такого рода
+    задача встречается при решении <b>ОДУ</b>, которые описывают, например,
+    кинетику химических реакций. В этом случае известны концентрации веществ в
+    начальный момент времени <span class="Var">(<b>t&nbsp;=&nbsp;0</b>)</span>,
+    и необходимо найти концентрации веществ через некоторый промежуток времени <span class="Var">(<b>t</b>)</span>. В качестве примера
+    можно так же привести задачу о теплопереносе или массопереносе (диффузии),
+    уравнение движения материальной точки под действием сил и т.д.</p>
+  <p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a name="Kraj_zad"></a><b><i>Краевая задача</i></b>. В этом случае
+    известны значения функции и (или) ее производных в более чем одной точке, например,
+    в начальный и конечный момент времени, и необходимо найти частное решение дифференциального
+    уравнения между этими точками. Сами дополнительные условия в этом случае
+    называются <i>краевыми</i> (<i>граничными</i>) условиями. Естественно, что
+    краевая задача может решаться для ОДУ не ниже 2-го порядка. Ниже приведен
+    пример ОДУ второго порядка с граничными условиями (заданы значения функции в
+    двух различных точках):</p>
+  <p><img width="405" height="47" src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/image026.gif">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+    <br>
+    ·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b><i>Задача Штурма-Лиувиля (задача на собственные
+    значения).</i></b> Задачи этого типа похожи на краевую задачу. При их решении
+    необходимо найти, при каких значениях какого-либо параметра решение <b>ДУ</b> удовлетворяет краевым условиям (собственные значения) и функции, которые
+    являются решением ДУ при каждом значении параметра (собственные функции). Например,
+    многие задачи квантовой механики являются задачами на собственные значения. </p>
+  <p class="top2"><b>Численные методы решения задачи Коши ОДУ
+    первого порядка</b></p>
+  <p>Рассмотрим некоторые
+    численные методы решения <i>задачи Коши</i> (начальной задачи) обыкновенных дифференциальных уравнений первого порядка.
+    Запишем данное уравнение в общем виде, разрешенном относительно производной (правая
+    часть уравнения не зависит от первой производной):</p>
+  <p><img width="124" height="45" src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/image028.gif">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a name="6-2"></a>(6.2)</p>
+  <p>Необходимо
+    найти значения функции y в заданных точках сетки <img src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/image030.gif" width="80" height="24" align="absmiddle">, если известны начальные значения <img src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/image032.gif" width="73" height="24" align="absmiddle">, где&nbsp; <img src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/image034.gif" width="76" height="24" align="absmiddle">&nbsp;есть значение функции <span class="Var">y(x) </span>в начальной точке <span class="Var">x<sub>0</sub>.</span></p>
+  <p>Преобразуем
+    уравнение умножением на <span class="Var">d</span>x</p>
+  <p><img width="107" height="23" src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/image036.gif"> </p>
+  <p>И проинтегрируем левую и правую части между<span class="Var"> i</span>-ым и <span class="Var">i+</span>1-ым узлами сетки. </p>
+  <p><img width="143" height="57" src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/image038.gif"></p>
+  <p><img width="161" height="57" src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/image040.gif">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a name="6-3"></a>(6.3)</p>
+  <p>Мы получили выражение для построения решения в <span class="Var">i+1</span> узле интегрирования через значения <span class="Var">x</span> и <span class="Var">y</span> в <span class="Var">i</span>-ом узле сетки. Сложность,
+    однако, заключается в том, что интеграл в правой части  есть интеграл от неявно
+    заданной функции, нахождение которого в аналитическом виде в общем случае
+    невозможно. Численные методы решения&nbsp; ОДУ различным способом аппроксимируют (приближают) значение этого интеграла
+    для построения формул численного интегрирования ОДУ.</p>
+  <p>Из
+    множества разработанных для решения ОДУ первого порядка методов рассмотрим методы <a href="http://www.physchem.chimfak.sfedu.ru/Source/NumMethods/ODE.html#Euler">Эйлера</a>, <a href="http://www.physchem.chimfak.sfedu.ru/Source/NumMethods/ODE.html#Runge">Рунге-Кутта</a> и <a href="http://www.physchem.chimfak.sfedu.ru/Source/NumMethods/ODE.html#Prognoz">прогноза и коррекции</a>. Они достаточно просты и дают начальное представление о подходах к
+    решению данной задачи в рамках численного решения <a href="http://www.physchem.chimfak.sfedu.ru/Source/NumMethods/ODE.html#Koshi">задачи Коши</a>. </p>
+  <p class="top3"><a name="Euler"></a>Метод Эйлера</p>
+  <p>Исторически первым и наиболее простым способом численного решения задачи
+    Коши для ОДУ первого порядка является метод Эйлера. В его основе лежит
+    аппроксимация производной отношением конечных приращений зависимой <span class="Var">(<b>y</b>)</span> и независимой <span class="Var">(<b>x</b></span>) переменных
+    между узлами равномерной сетки:</p>
+  <p><img width="245" height="49" src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/image042.gif"></p>
+  <p>где <span class="Var">y<sub>i+1</sub></span><sub>&nbsp;</sub> это искомое значение функции в точке <span class="Var">x<sub>i+1</sub></span>.</p>
+  <p>Если теперь
+    преобразовать это уравнение, и учесть равномерность сетки интегрирования, то
+    получится итерационная формула, по которой можно вычислить &nbsp;<span class="Var"><b>y<sub>i+1</sub></b></span>&nbsp;, если известно <span class="Var">y<sub>i</sub></span>&nbsp;
+    в точке <span class="Var">х<sub>i</sub></span>:</p>
+  <p><img width="145" height="24" src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/image044.gif">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a name="6-4"></a>(6.4)</p>
+  <p>Сравнивая формулу Эйлера с
+    общим выражением, полученным ранее, видно, что для приближенного вычисления
+    интеграла  в <a href="http://www.physchem.chimfak.sfedu.ru/Source/NumMethods/ODE.html#6-3">(6.3)</a> в методе Эйлера используется простейшая
+    формула интегрирования - формула прямоугольников по левому краю отрезка.</p>
+  <p>Графическая интерпретация
+    метода Эйлера также не представляет затруднений (см. рисунок ниже). Действительно, исходя из
+    вида решаемого уравнения (<a href="http://www.physchem.chimfak.sfedu.ru/Source/NumMethods/ODE.html#6-2">6.2</a>) следует, что значение <img src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/image046.gif" width="67" height="24" align="absmiddle">&nbsp;есть значение
+    производной функции <span class="Var">y(x)</span> в точке <span class="Var">x=x<sub>i</sub></span> - &nbsp;<img src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/image048.gif" width="48" height="53" align="absmiddle">&nbsp;, и, таким образом, равно тангенсу угла наклона каcательной, проведенной к графику функции <span class="Var">y(x) </span>в точке <span class="Var">x=x<sub>i</sub></span>. </p>
+  <p><img width="336" height="265" src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/image049.gif"></p>
+  <p>&nbsp;Из прямоугольного треугольника на
+    рисунке можно найти</p>
+  <p>&nbsp;<img width="263" height="24" src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/image052.gif">,</p>
+  <p>откуда и получается формула Эйлера. Таким образом, суть
+    метода Эйлера заключается в замене функции <span class="Var">y(x)</span> на
+    отрезке интегрирования прямой линией, касательной к графику в точке <span class="Var">x=x<sub>i</sub></span>. Если искомая функция сильно
+    отличается от линейной на отрезке интегрирования, то погрешность вычисления
+    будет значительной. Ошибка метода Эйлера прямо пропорциональна шагу
+    интегрирования:</p>
+  <p><b><i>Ошибка</i>&nbsp;~&nbsp;h</b></p>
+  <p>Процесс вычислений строится следующим образом. При заданных начальных
+    условиях <span class="Var"><b>x<sub>0</sub></b></span> и <span class="Var"><b>y<sub>0</sub></b></span> можно
+    вычислить</p>
+  <p><img width="309" height="129" src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/image054.gif"></p>
+  <p>Таким образом, строится таблица
+    значений функции <span class="Var">y(x)</span> с определенным шагом <span class="Var">(<b>h</b>)</span> по <b>x</b> на отрезке <span class="Var">[x<sub>0</sub>, x<sub>N</sub>].</span> Ошибка в определении
+    значения <b class="Var">y(x<sub>i</sub>)</b> при этом будет
+    тем меньше, чем меньше выбрана длина шага <b class="Var">h</b><b> </b>(что
+    определяется точностью формулы интегрирования). </p>
+  <p>При больших<span class="Var"> h</span> метод Эйлера весьма
+    неточен. Он дает все более точное приближение при уменьшении шага
+    интегрирования. Если отрезок <span class="Var">[x<sub>i</sub>, x<sub>i+1</sub>]</span>    слишком велик, то каждый участок <span class="Var">[x<sub>i</sub>, x<sub>i+1</sub>]</span> разбивается на <span class="Var">N</span> отрезков интегрирования и к
+    каждому их них применяется формула Эйлера с шагом <img src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/image056.gif" width="85" height="45" align="absmiddle">, то есть шаг интегрирования <span class="Var">h</span> берется меньше шага сетки, на которой
+    определяется решение.</p>
+  <p><i><u>Пример:</u></i></p>
+  <p>Используя метод Эйлера, построить приближенное решение для
+    следующей задачи Коши:</p>
+  <p><img src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/image058.gif" width="180" height="45" align="absmiddle">&nbsp;&nbsp;&nbsp; На сетке с шагом
+    0,1 в интервале [0, 1] &nbsp; <a name="6-5"></a>(6.5)</p>
+  <p><i><u>Решение:</u></i></p>
+  <p>Данное уравнение уже записано в стандартном виде,
+    резрешенном относительно производной искомой функции. </p>
+  <p><img width="92" height="45" src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/image060.gif"></p>
+  <p>Поэтому, для решаемого уравнения имеем</p>
+  <p><img width="107" height="23" src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/image062.gif"></p>
+  <p>Примем шаг интегрирования равным шагу сетки <span class="Var">h </span>= 0,1. При этом для каждого
+    узла сетки будет вычислено только одно значение (<span class="Var">N=1</span>). &nbsp;Для первых четырех
+    узлов сетки вычисления будут следующими:</p>
+  <p><img width="456" height="104" src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/image064.gif"></p>
+  <p>И т. д.</p>
+  <p>Полные результаты (с точностью до пятого знака после
+    запятой) приведены в <a href="http://www.physchem.chimfak.sfedu.ru/Source/NumMethods/ODE.html#Table1">таблице 1</a> в третьей колонке -&nbsp; <span class="Var">h</span>=0,1 (<span class="Var">N</span>=1). Во второй колонке
+    таблицы для сравнения приведены значения, вычисленные по аналитическому решению
+    данного уравнения&nbsp;&nbsp;&nbsp;&nbsp; <img src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/image066.gif" width="100" height="25" align="absmiddle">.</p>
+  <p>Во второй части таблицы приведена относительная погрешность
+    полученных решений. Видно, что при <span class="Var">h</span>=0,1 погрешность весьма велика, достигая 100% для первого узла <span class="Var">x</span>=0,1.</p>
+  	  <p class="TabTitle"><a name="Table1"></a>Таблица 1
+    Решение уравнения <a href="http://www.physchem.chimfak.sfedu.ru/Source/NumMethods/ODE.html#6-5">(6.5)</a> методом Эйлера (для колонок указан шаг интегрирования и число отрезков интегрирования <span class="Var">N</span> между
+    узлами сетки)</p>
+  	  <table border="1" cellspacing="0" cellpadding="0" width="652" align="center" class="tab_small TabPage">
+    <tbody><tr>
+      <th width="71" rowspan="2" bgcolor="#99CCFF" class="Var">x
+      </th><th width="72" rowspan="2" valign="bottom" nowrap="" bgcolor="#99CCFF">Точное <br>
+        решение
+      </th><th width="72" valign="bottom" nowrap="" bgcolor="#99CCFF">0,1
+      </th><th width="72" valign="bottom" nowrap="" bgcolor="#99CCFF">0,05
+      </th><th width="72" valign="bottom" nowrap="" bgcolor="#99CCFF">0,025
+      </th><th width="79" valign="bottom" nowrap="" bgcolor="#99CCFF">0,00625
+      </th><th width="72" valign="bottom" nowrap="" bgcolor="#99CCFF">0,0015625
+      </th><th width="71" valign="bottom" nowrap="" bgcolor="#99CCFF">0,0007813
+      </th><th width="72" valign="bottom" nowrap="" bgcolor="#99CCFF">0,0001953
+    </th></tr>
+    <tr>
+      <th valign="bottom" nowrap="" bgcolor="#99CCFF">1
+      </th><th valign="bottom" nowrap="" bgcolor="#99CCFF">2
+      </th><th valign="bottom" nowrap="" bgcolor="#99CCFF">4
+      </th><th width="79" valign="bottom" nowrap="" bgcolor="#99CCFF">16
+      </th><th valign="bottom" nowrap="" bgcolor="#99CCFF">64
+      </th><th valign="bottom" nowrap="" bgcolor="#99CCFF">128
+      </th><th valign="bottom" nowrap="" bgcolor="#99CCFF">512
+    </th></tr>
+    <tr>
+      <td valign="bottom">0</td>
+      <td nowrap="" valign="bottom">0,000000</td>
+      <td nowrap="" valign="bottom">0,000000</td>
+      <td nowrap="" valign="bottom">0,000000</td>
+      <td nowrap="" valign="bottom">0,000000</td>
+      <td width="79" nowrap="" valign="bottom">0,000000</td>
+      <td nowrap="" valign="bottom">0,000000</td>
+      <td nowrap="" valign="bottom">0,000000</td>
+      <td nowrap="" valign="bottom">0,000000</td>
+    </tr>
+    <tr>
+      <td valign="bottom">0,1</td>
+      <td nowrap="" valign="bottom">0,004837</td>
+      <td nowrap="" valign="bottom">0,000000</td>
+      <td nowrap="" valign="bottom">0,002500</td>
+      <td nowrap="" valign="bottom">0,003688</td>
+      <td width="79" nowrap="" valign="bottom">0,004554</td>
+      <td nowrap="" valign="bottom">0,004767</td>
+      <td nowrap="" valign="bottom">0,004802</td>
+      <td nowrap="" valign="bottom">0,004829</td>
+    </tr>
+    <tr>
+      <td valign="bottom">0,2</td>
+      <td nowrap="" valign="bottom">0,018731</td>
+      <td nowrap="" valign="bottom">0,010000</td>
+      <td nowrap="" valign="bottom">0,014506</td>
+      <td nowrap="" valign="bottom">0,016652</td>
+      <td width="79" nowrap="" valign="bottom">0,018217</td>
+      <td nowrap="" valign="bottom">0,018603</td>
+      <td nowrap="" valign="bottom">0,018667</td>
+      <td nowrap="" valign="bottom">0,018715</td>
+    </tr>
+    <tr>
+      <td valign="bottom">0,3</td>
+      <td nowrap="" valign="bottom">0,040818</td>
+      <td nowrap="" valign="bottom">0,029000</td>
+      <td nowrap="" valign="bottom">0,035092</td>
+      <td nowrap="" valign="bottom">0,037998</td>
+      <td width="79" nowrap="" valign="bottom">0,040121</td>
+      <td nowrap="" valign="bottom">0,040644</td>
+      <td nowrap="" valign="bottom">0,040731</td>
+      <td nowrap="" valign="bottom">0,040797</td>
+    </tr>
+    <tr>
+      <td valign="bottom">0,4</td>
+      <td nowrap="" valign="bottom">0,070320</td>
+      <td nowrap="" valign="bottom">0,056100</td>
+      <td nowrap="" valign="bottom">0,063420</td>
+      <td nowrap="" valign="bottom">0,066920</td>
+      <td width="79" nowrap="" valign="bottom">0,069479</td>
+      <td nowrap="" valign="bottom">0,070110</td>
+      <td nowrap="" valign="bottom">0,070215</td>
+      <td nowrap="" valign="bottom">0,070294</td>
+    </tr>
+    <tr>
+      <td valign="bottom">0,5</td>
+      <td nowrap="" valign="bottom">0,106531</td>
+      <td nowrap="" valign="bottom">0,090490</td>
+      <td nowrap="" valign="bottom">0,098737</td>
+      <td nowrap="" valign="bottom">0,102688</td>
+      <td width="79" nowrap="" valign="bottom">0,105580</td>
+      <td nowrap="" valign="bottom">0,106294</td>
+      <td nowrap="" valign="bottom">0,106412</td>
+      <td nowrap="" valign="bottom">0,106501</td>
+    </tr>
+    <tr>
+      <td valign="bottom">0,6</td>
+      <td nowrap="" valign="bottom">0,148812</td>
+      <td nowrap="" valign="bottom">0,131441</td>
+      <td nowrap="" valign="bottom">0,140360</td>
+      <td nowrap="" valign="bottom">0,144642</td>
+      <td width="79" nowrap="" valign="bottom">0,147779</td>
+      <td nowrap="" valign="bottom">0,148554</td>
+      <td nowrap="" valign="bottom">0,148683</td>
+      <td nowrap="" valign="bottom">0,148779</td>
+    </tr>
+    <tr>
+      <td valign="bottom">0,7</td>
+      <td nowrap="" valign="bottom">0,196585</td>
+      <td nowrap="" valign="bottom">0,178297</td>
+      <td nowrap="" valign="bottom">0,187675</td>
+      <td nowrap="" valign="bottom">0,192186</td>
+      <td width="79" nowrap="" valign="bottom">0,195496</td>
+      <td nowrap="" valign="bottom">0,196314</td>
+      <td nowrap="" valign="bottom">0,196449</td>
+      <td nowrap="" valign="bottom">0,196551</td>
+    </tr>
+    <tr>
+      <td valign="bottom">0,8</td>
+      <td nowrap="" valign="bottom">0,249329</td>
+      <td nowrap="" valign="bottom">0,230467</td>
+      <td nowrap="" valign="bottom">0,240127</td>
+      <td nowrap="" valign="bottom">0,244783</td>
+      <td width="79" nowrap="" valign="bottom">0,248202</td>
+      <td nowrap="" valign="bottom">0,249048</td>
+      <td nowrap="" valign="bottom">0,249188</td>
+      <td nowrap="" valign="bottom">0,249294</td>
+    </tr>
+    <tr>
+      <td valign="bottom">0,9</td>
+      <td nowrap="" valign="bottom">0,306570</td>
+      <td nowrap="" valign="bottom">0,287420</td>
+      <td nowrap="" valign="bottom">0,297214</td>
+      <td nowrap="" valign="bottom">0,301945</td>
+      <td width="79" nowrap="" valign="bottom">0,305423</td>
+      <td nowrap="" valign="bottom">0,306284</td>
+      <td nowrap="" valign="bottom">0,306427</td>
+      <td nowrap="" valign="bottom">0,306534</td>
+    </tr>
+    <tr>
+      <td valign="bottom">1</td>
+      <td nowrap="" valign="bottom">0,367879</td>
+      <td nowrap="" valign="bottom">0,348678</td>
+      <td nowrap="" valign="bottom">0,358486</td>
+      <td nowrap="" valign="bottom">0,363232</td>
+      <td width="79" nowrap="" valign="bottom">0,366727</td>
+      <td nowrap="" valign="bottom">0,367592</td>
+      <td nowrap="" valign="bottom">0,367736</td>
+      <td nowrap="" valign="bottom">0,367844</td>
+    </tr>
+    <tr>
+      <td width="652" height="47" colspan="9"><p class="TabTitle">Относительные
+          погрешности вычисленных значений функции при различных h</p>
+        </td>
+    </tr>
+    <tr>
+      <th rowspan="2" bgcolor="#99CCFF" class="auto-style2">x</th>
+      <th valign="bottom" nowrap="" bgcolor="#99CCFF" class="auto-style2">h</th>
+      <th valign="bottom" nowrap="" bgcolor="#99CCFF" class="auto-style2">0,1</th>
+      <th valign="bottom" nowrap="" bgcolor="#99CCFF" class="auto-style2">0,05</th>
+      <th valign="bottom" nowrap="" bgcolor="#99CCFF" class="auto-style2">0,025</th>
+      <th width="79" valign="bottom" nowrap="" bgcolor="#99CCFF" class="auto-style2">0,00625</th>
+      <th valign="bottom" nowrap="" bgcolor="#99CCFF" class="auto-style2">0,0015625</th>
+      <th valign="bottom" nowrap="" bgcolor="#99CCFF" class="auto-style2">0,0007813</th>
+      <th valign="bottom" nowrap="" bgcolor="#99CCFF" class="auto-style2">0,0001953</th>
+    </tr>
+    <tr>
+      <th valign="bottom" nowrap="" bgcolor="#99CCFF" class="auto-style2">N</th>
+      <th valign="bottom" nowrap="" bgcolor="#99CCFF" class="auto-style2">1</th>
+      <th valign="bottom" nowrap="" bgcolor="#99CCFF" class="auto-style2">2</th>
+      <th valign="bottom" nowrap="" bgcolor="#99CCFF" class="auto-style2">4</th>
+      <th width="79" valign="bottom" nowrap="" bgcolor="#99CCFF" class="auto-style2">16</th>
+      <th valign="bottom" nowrap="" bgcolor="#99CCFF" class="auto-style2">64</th>
+      <th valign="bottom" nowrap="" bgcolor="#99CCFF" class="auto-style2">128</th>
+      <th valign="bottom" nowrap="" bgcolor="#99CCFF" class="auto-style2">512</th>
+    </tr>
+    <tr>
+      <td valign="bottom">0,1</td>
+      <td nowrap="" valign="bottom">&nbsp;</td>
+      <td nowrap="" valign="bottom">100,00%</td>
+      <td nowrap="" valign="bottom">48,32%</td>
+      <td nowrap="" valign="bottom">23,76%</td>
+      <td width="79" nowrap="" valign="bottom">5,87%</td>
+      <td nowrap="" valign="bottom">1,46%</td>
+      <td nowrap="" valign="bottom">0,73%</td>
+      <td nowrap="" valign="bottom">0,18%</td>
+    </tr>
+    <tr>
+      <td valign="bottom">0,2</td>
+      <td nowrap="" valign="bottom">&nbsp;</td>
+      <td nowrap="" valign="bottom">46,61%</td>
+      <td nowrap="" valign="bottom">22,55%</td>
+      <td nowrap="" valign="bottom">11,10%</td>
+      <td width="79" nowrap="" valign="bottom">2,74%</td>
+      <td nowrap="" valign="bottom">0,68%</td>
+      <td nowrap="" valign="bottom">0,34%</td>
+      <td nowrap="" valign="bottom">0,09%</td>
+    </tr>
+    <tr>
+      <td valign="bottom">0,3</td>
+      <td nowrap="" valign="bottom">&nbsp;</td>
+      <td nowrap="" valign="bottom">28,95%</td>
+      <td nowrap="" valign="bottom">14,03%</td>
+      <td nowrap="" valign="bottom">6,91%</td>
+      <td width="79" nowrap="" valign="bottom">1,71%</td>
+      <td nowrap="" valign="bottom">0,43%</td>
+      <td nowrap="" valign="bottom">0,21%</td>
+      <td nowrap="" valign="bottom">0,05%</td>
+    </tr>
+    <tr>
+      <td valign="bottom">0,4</td>
+      <td nowrap="" valign="bottom">&nbsp;</td>
+      <td nowrap="" valign="bottom">20,22%</td>
+      <td nowrap="" valign="bottom">9,81%</td>
+      <td nowrap="" valign="bottom">4,83%</td>
+      <td width="79" nowrap="" valign="bottom">1,20%</td>
+      <td nowrap="" valign="bottom">0,30%</td>
+      <td nowrap="" valign="bottom">0,15%</td>
+      <td nowrap="" valign="bottom">0,04%</td>
+    </tr>
+    <tr>
+      <td valign="bottom">0,5</td>
+      <td nowrap="" valign="bottom">&nbsp;</td>
+      <td nowrap="" valign="bottom">15,06%</td>
+      <td nowrap="" valign="bottom">7,32%</td>
+      <td nowrap="" valign="bottom">3,61%</td>
+      <td width="79" nowrap="" valign="bottom">0,89%</td>
+      <td nowrap="" valign="bottom">0,22%</td>
+      <td nowrap="" valign="bottom">0,11%</td>
+      <td nowrap="" valign="bottom">0,03%</td>
+    </tr>
+    <tr>
+      <td valign="bottom">0,6</td>
+      <td nowrap="" valign="bottom">&nbsp;</td>
+      <td nowrap="" valign="bottom">11,67%</td>
+      <td nowrap="" valign="bottom">5,68%</td>
+      <td nowrap="" valign="bottom">2,80%</td>
+      <td width="79" nowrap="" valign="bottom">0,69%</td>
+      <td nowrap="" valign="bottom">0,17%</td>
+      <td nowrap="" valign="bottom">0,09%</td>
+      <td nowrap="" valign="bottom">0,02%</td>
+    </tr>
+    <tr>
+      <td valign="bottom">0,7</td>
+      <td nowrap="" valign="bottom">&nbsp;</td>
+      <td nowrap="" valign="bottom">9,30%</td>
+      <td nowrap="" valign="bottom">4,53%</td>
+      <td nowrap="" valign="bottom">2,24%</td>
+      <td width="79" nowrap="" valign="bottom">0,55%</td>
+      <td nowrap="" valign="bottom">0,14%</td>
+      <td nowrap="" valign="bottom">0,07%</td>
+      <td nowrap="" valign="bottom">0,02%</td>
+    </tr>
+    <tr>
+      <td valign="bottom">0,8</td>
+      <td nowrap="" valign="bottom">&nbsp;</td>
+      <td nowrap="" valign="bottom">7,57%</td>
+      <td nowrap="" valign="bottom">3,69%</td>
+      <td nowrap="" valign="bottom">1,82%</td>
+      <td width="79" nowrap="" valign="bottom">0,45%</td>
+      <td nowrap="" valign="bottom">0,11%</td>
+      <td nowrap="" valign="bottom">0,06%</td>
+      <td nowrap="" valign="bottom">0,01%</td>
+    </tr>
+    <tr>
+      <td valign="bottom">0,9</td>
+      <td nowrap="" valign="bottom">&nbsp;</td>
+      <td nowrap="" valign="bottom">6,25%</td>
+      <td nowrap="" valign="bottom">3,05%</td>
+      <td nowrap="" valign="bottom">1,51%</td>
+      <td width="79" nowrap="" valign="bottom">0,37%</td>
+      <td nowrap="" valign="bottom">0,09%</td>
+      <td nowrap="" valign="bottom">0,05%</td>
+      <td nowrap="" valign="bottom">0,01%</td>
+    </tr>
+    <tr>
+      <td valign="bottom">1</td>
+      <td nowrap="" valign="bottom">&nbsp;</td>
+      <td nowrap="" valign="bottom">5,22%</td>
+      <td nowrap="" valign="bottom">2,55%</td>
+      <td nowrap="" valign="bottom">1,26%</td>
+      <td width="79" nowrap="" valign="bottom">0,31%</td>
+      <td nowrap="" valign="bottom">0,08%</td>
+      <td nowrap="" valign="bottom">0,04%</td>
+      <td nowrap="" valign="bottom">0,01%</td>
+    </tr>
+  </tbody></table>
+  <p>Уменьшим шаг интегрирования вдвое, <span class="Var">h&nbsp;</span>=&nbsp;0.05, в этом случае для
+    каждого узла сетки вычисление будет проводиться за два шага (<span class="Var">N</span>=2). Так, для первого узла <span class="Var">x</span>=0,1 получим:</p>
+  <p>&nbsp;<img width="480" height="51" src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/image068.gif"></p>
+  <p>И так далее, до конца отрезка. </p>
+  <p>Из <a href="http://www.physchem.chimfak.sfedu.ru/Source/NumMethods/ODE.html#Table1">таблицы 1</a> (четвертая колонка, <span class="Var">N</span>=2) видно, что погрешность решения
+    резко снизилась, примерно вдвое, хотя и осталась по-прежнему, значительной.</p>
+  <p>При шаге интегрирования <span class="Var">h</span>=0,025 для каждого узла сетки необходимо выполнить 4 вычисления
+    по формуле Эйлера в промежуточных точках (<span class="Var">N</span>=4).</p>
+  <p><img width="460" height="180" src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/image070.gif"></p>
+  <p>(Для других узлов значения приведены в <a href="http://www.physchem.chimfak.sfedu.ru/Source/NumMethods/ODE.html#Table1">таблице 1</a>, колонка <span class="Var">N</span>=4)</p>
+  <p>В <a href="http://www.physchem.chimfak.sfedu.ru/Source/NumMethods/ODE.html#Table1">таблице 1</a> приведены для сравнения вычисления для некоторых других значений <span class="Var">N</span>, вплоть до 512. Видно, что
+    точность решения возрастает весьма медленно при уменьшении шага интегрирования, необходимо брать очень маленький
+    шаг для достижения приемлемой точности (и, следовательно, много раз вычислять
+    значение&nbsp; <span class="Var">F(x,y))</span>. Поэтому метод Эйлера
+    практически не используется в вычислительной практике.</p>
+  <p class="top3"><b><a name="Hune"></a>Усовершенствованный метод Эйлера. Метод Гюна.</b></p>
+  <p>Точность метода
+    Эйлера можно повысить, если воспользоваться для аппроксимации интеграла  более точной формулой
+    интегрирования – <a href="http://www.physchem.chimfak.sfedu.ru/Source/NumMethods/Integration.php#Trap">формулой трапеций</a>.</p>
+  <p><img width="253" height="45" src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/image072.gif">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a name="6-6"></a>(6.6)</p>
+  <p>Данная формула
+    оказывается неявной относительно <span class="Var">y<sub>i+1</sub></span> (это значение есть и в левой и в
+    правой части выражения), то есть является уравением относительно <span class="Var">y<sub>i+1</sub></span>,
+    решать которое можно, например, численно, применяя какой-либо итерационный
+    метод (в таком виде его можно рассматривать как итерационную формула метода <a href="http://www.physchem.chimfak.sfedu.ru/Source/NumMethods/Roots_eq.html#Iter">простой итерации</a>). Однако, можно поступить иначи и <em>приблизительно</em> вычислить значение функции в узле <i class="Var">i+1 </i>с &nbsp;помощью обычной
+    формулы <a href="http://www.physchem.chimfak.sfedu.ru/Source/NumMethods/ODE.html#Euler">Эйлера</a>:</p>
+  <p><img width="143" height="24" src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/image074.gif">,</p>
+  <p>которое затем
+    использовать при вычислении по (6.6).</p>
+  <p>Таким образом
+    получается метод <i>Гюна</i> или метод
+    Эйлера с пересчетом. Для каждого узла интегрирования производится следующая цепочка
+    вычислений</p>
+  <p><img width="143" height="24" src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/image076.gif"></p>
+  <p><img width="253" height="45" src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/image078.gif">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a name="6-7"></a>(6.7)</p>
+  <p>Благодаря более
+    точной формуле интегрирования, погрешность метода Гюна пропорциональна уже квадрату
+    шага интегрирования.</p>
+  <p><b><i>Ошибка</i>&nbsp;~&nbsp;h<sup>2</sup></b></p>
+  <p>Подход, использованный в
+    методе Гюна, используется для построения так называемых методов <i>прогноза и коррекции</i>, которые будут
+    рассмотрены позже.</p>
+  <p><i><u>Пример:</u></i></p>
+  <p>Проведем вычисления для уравения  (<a href="http://www.physchem.chimfak.sfedu.ru/Source/NumMethods/ODE.html#6-5">6.5</a>) с помощью метода Гюна.</p>
+  <p>При шаге интегрирования<span class="Var"> h</span>=0,1 в первом узле сетки <span class="Var">x<sub>1</sub> </span>получим:</p>
+  <p><img width="464" height="71" src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/image080.gif"></p>
+  <p>Что намного точнее значения, полученного методом Эйлера при
+    том же шаге интегрирования. В таблице 2 ниже приведены сравнительные результаты
+    вычислений при <span class="Var">h</span>= 0,1 методов
+    Эйлера и Гюна. </p>
+  <p class="TabTitle"><a name="Table2"></a>Таблица 2 Решение уравнения методами Эйлера и Гюна</p>
+  	  <table width="595" border="1" align="center" cellpadding="0" cellspacing="0" class="tab_2 TabPage">
+    <tbody><tr>
+      <th width="64" nowrap="" rowspan="2" valign="bottom" class="auto-style2">x</th>
+      <th width="87" nowrap="" rowspan="2" valign="bottom" class="auto-style2">Точное</th>
+      <th width="227" nowrap="" colspan="2" valign="bottom" class="auto-style2">Метод Гюна</th>
+      <th width="217" nowrap="" colspan="2" valign="bottom" class="auto-style2">Метод Эйлера</th>
+    </tr>
+    <tr>
+      <th nowrap="" valign="bottom" class="auto-style2">y</th>
+      <th nowrap="" valign="bottom" class="auto-style2">отн. погрешность </th>
+      <th nowrap="" valign="bottom" class="auto-style2">y</th>
+      <th nowrap="" valign="bottom" class="auto-style2">отн. погрешность </th>
+    </tr>
+    <tr>
+      <td nowrap="" valign="bottom">0</td>
+      <td nowrap="" valign="bottom">0,000000</td>
+      <td nowrap="" valign="bottom">0,00000</td>
+      <td nowrap="" valign="bottom">&nbsp;</td>
+      <td nowrap="" valign="bottom">0,00000</td>
+      <td nowrap="" valign="bottom">&nbsp;</td>
+    </tr>
+    <tr>
+      <td nowrap="" valign="bottom">0,1</td>
+      <td nowrap="" valign="bottom">0,004837</td>
+      <td nowrap="" valign="bottom">0,00500</td>
+      <td nowrap="" valign="bottom">3,36%</td>
+      <td nowrap="" valign="bottom">0,00000</td>
+      <td nowrap="" valign="bottom">100,00%</td>
+    </tr>
+    <tr>
+      <td nowrap="" valign="bottom">0,2</td>
+      <td nowrap="" valign="bottom">0,018731</td>
+      <td nowrap="" valign="bottom">0,01903</td>
+      <td nowrap="" valign="bottom">1,57%</td>
+      <td nowrap="" valign="bottom">0,01000</td>
+      <td nowrap="" valign="bottom">46,61%</td>
+    </tr>
+    <tr>
+      <td nowrap="" valign="bottom">0,3</td>
+      <td nowrap="" valign="bottom">0,040818</td>
+      <td nowrap="" valign="bottom">0,04122</td>
+      <td nowrap="" valign="bottom">0,98%</td>
+      <td nowrap="" valign="bottom">0,02900</td>
+      <td nowrap="" valign="bottom">28,95%</td>
+    </tr>
+    <tr>
+      <td nowrap="" valign="bottom">0,4</td>
+      <td nowrap="" valign="bottom">0,070320</td>
+      <td nowrap="" valign="bottom">0,07080</td>
+      <td nowrap="" valign="bottom">0,69%</td>
+      <td nowrap="" valign="bottom">0,05610</td>
+      <td nowrap="" valign="bottom">20,22%</td>
+    </tr>
+    <tr>
+      <td nowrap="" valign="bottom">0,5</td>
+      <td nowrap="" valign="bottom">0,106531</td>
+      <td nowrap="" valign="bottom">0,10708</td>
+      <td nowrap="" valign="bottom">0,51%</td>
+      <td nowrap="" valign="bottom">0,09049</td>
+      <td nowrap="" valign="bottom">15,06%</td>
+    </tr>
+    <tr>
+      <td nowrap="" valign="bottom">0,6</td>
+      <td nowrap="" valign="bottom">0,148812</td>
+      <td nowrap="" valign="bottom">0,14940</td>
+      <td nowrap="" valign="bottom">0,40%</td>
+      <td nowrap="" valign="bottom">0,13144</td>
+      <td nowrap="" valign="bottom">11,67%</td>
+    </tr>
+    <tr>
+      <td nowrap="" valign="bottom">0,7</td>
+      <td nowrap="" valign="bottom">0,196585</td>
+      <td nowrap="" valign="bottom">0,19721</td>
+      <td nowrap="" valign="bottom">0,32%</td>
+      <td nowrap="" valign="bottom">0,17830</td>
+      <td nowrap="" valign="bottom">9,30%</td>
+    </tr>
+    <tr>
+      <td nowrap="" valign="bottom">0,8</td>
+      <td nowrap="" valign="bottom">0,249329</td>
+      <td nowrap="" valign="bottom">0,24998</td>
+      <td nowrap="" valign="bottom">0,26%</td>
+      <td nowrap="" valign="bottom">0,23047</td>
+      <td nowrap="" valign="bottom">7,57%</td>
+    </tr>
+    <tr>
+      <td nowrap="" valign="bottom">0,9</td>
+      <td nowrap="" valign="bottom">0,306570</td>
+      <td nowrap="" valign="bottom">0,30723</td>
+      <td nowrap="" valign="bottom">0,21%</td>
+      <td nowrap="" valign="bottom">0,28742</td>
+      <td nowrap="" valign="bottom">6,25%</td>
+    </tr>
+    <tr>
+      <td nowrap="" valign="bottom">1</td>
+      <td nowrap="" valign="bottom">0,367879</td>
+      <td nowrap="" valign="bottom">0,36854</td>
+      <td nowrap="" valign="bottom">0,18%</td>
+      <td nowrap="" valign="bottom">0,34868</td>
+      <td nowrap="" valign="bottom">5,22%</td>
+    </tr>
+  </tbody></table>
+  <p>Отметим существенное увеличение точности вычислений метода
+    Гюна по сравнению с методом Эйлера. Так, для узла <span class="Var">x</span>=0,1 относительное отклонение значения
+    функции, определенного методом Гюна, оказывается в 30 (!) раз меньше. Такая же
+    точность вычислений по формуле Эйлера достигается при числе отрезков
+    интегрирования <span class="Var">N</span> примерно 30. Следовательно, при использовании метода Гюна
+    при одинаковой точности вычислений понадобится примерно в 15 раз меньше времени
+    ЭВМ, чем при использовании метода Эйлера.</p>
+  <p class="top3">Проверка устойчивости решения</p>
+  <p>Решение ОДУ в некоторой точке <span class="Var">x<sub>i</sub> </span>называется
+    устойчивым, если найденное в этой точке значение функции <span class="Var"><b>y<sub>i</sub></b></span> мало изменяется при уменьшении шага интегрирования. Для проверки
+    устойчивости, таким образом, надо провести два расчета значения <span class="Var">(<b>y<sub>i</sub></b>)</span> – с шагом интегрирования <span class="Var">h</span> и при уменьшенной
+    (например, двое) величине шага</p>
+  <p><img width="52" height="45" src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/image082.gif"></p>
+  <p>В качестве
+    критерия устойчивости можно использовать малость относительного изменения полученного решения при
+    уменьшении шага интегрирования (<span class="Var">&#949;</span> – наперед заданная малая величина)</p>
+  <p><img width="105" height="75" src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/image084.gif"></p>
+  <p>Такая проверка
+    может осуществляться и для всех решений на всем интервале значений <b class="Var">x</b>. Если условие не выполняется, то шаг снова делится пополам
+    и находится новое решение и т.д. до получения устойчивого решения.</p>
+  <p class="top2"><b><a name="Runge"></a>Методы Рунге-Кутты</b></p>
+  <p>Дальнейшее улучшение точности решения ОДУ первого порядка
+    возможно за счет увеличения точности приближенного вычисления интеграла в
+    выражении <a href="http://www.physchem.chimfak.sfedu.ru/Source/NumMethods/ODE.html#6-3">(6.3)</a>. </p>
+  <p>Мы уже видели, какое преимущество дает переход от интегрирования по формуле
+    <a href="http://www.physchem.chimfak.sfedu.ru/Source/NumMethods/Integration.php#Prjam">прямоугольников</a> (<a href="http://www.physchem.chimfak.sfedu.ru/Source/NumMethods/ODE.html#Euler">метод Эйлера</a>) к использованию  формулы <a href="http://www.physchem.chimfak.sfedu.ru/Source/NumMethods/Integration.php#Trap">трапеций</a> (<a href="http://www.physchem.chimfak.sfedu.ru/Source/NumMethods/ODE.html#Hune">метод Гюна</a>) при
+    аппроксимации этого интеграла.</p>
+  <p>Воспользовавшись хорошо зарекомендовавшей себя <a href="http://www.physchem.chimfak.sfedu.ru/Source/NumMethods/Integration.php#Simpson_form">формулой Симпсона</a>,
+    можно получить еще более точную формулу для решения задачи Коши для ОДУ первого
+    порядка - &nbsp;широко используемого в
+    вычислительной практике метода Рунге-Кутты.</p>
+  <p>В <a href="http://www.physchem.chimfak.sfedu.ru/Source/NumMethods/Integration.php#Simpson_form">формуле Симпсона</a> для приближенного вычисления
+    определенного интеграла используются значения подинтегрального выражения в &nbsp;трех точках. В интеграле  их всего две, поэтому введем
+    дополнительную точку в середине отрезка <span class="auto-style1">[</span><span class="Var">x<sub>i+1</sub> x<sub>i</sub></span><span class="auto-style1">]</span></p>
+  <p><img width="95" height="45" src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/image086.gif"> </p>
+  <p> тогда можно переписать так:</p>
+  <p><img width="192" height="57" src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/image088.gif"></p>
+  <p><img width="400" height="45" src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/image090.gif"></p>
+  <p>Полученное выражение является неявным, так как в правой
+    части содержатся&nbsp; еще не определенные
+    значения функции <span class="Var">y<sub>i+h/2</sub></span> и <span class="Var">y<sub>i+1</sub></span>.
+    Чтобы воспользоваться этой формулой, надо использовать некоторое приближение для вычисления этих
+    значений <img width="73" height="24" src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/image092.gif">&nbsp;<img width="381" height="45" src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/image094.gif"></p>
+  <p>При использовании различных методов приближенного вычисления этих
+    величин,  получаются выражения для методов Рунге-Кутты различного порядка точности.</p>
+  <p><i><a name="RK3_form"></a>Алгоритм Рунге-Кутты
+    третьего порядка - </i><strong>РК3</strong><i> (погрешность порядка h<sup>3</sup>)</i>:</p>
+  <p><img width="187" height="45" src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/image096.gif">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a name="6-8"></a>(6.8)</p>
+  <p>где&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </p>
+  <p><img width="108" height="24" src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/image098.gif"></p>
+  <p><img width="207" height="76" src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/image100.gif"></p>
+  <p><i><a name="RK4_form"></a>Алгоритм Рунге-Кутты
+    четвертого порядка- </i><strong>РК4 </strong><i>(погрешность порядка h<sup>4</sup>)</i>:</p>
+  <p><img width="229" height="45" src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/image102.gif">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a name="6-9"></a>(6.9)</p>
+  <p>где&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </p>
+  <p><img width="113" height="24" src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/image104.gif"></p>
+  <p><img width="179" height="127" src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/image106.gif"></p>
+  <p>Алгоритмы третьего и четвертого порядков требуют на каждом
+    шаге трех и четырех вычислений функции соответственно, но являются весьма точными.</p>
+  <p><i><u>Пример:</u></i></p>
+  <p>Используя алгоритм Рунге-Кутты третьего  (<a href="http://www.physchem.chimfak.sfedu.ru/Source/NumMethods/ODE.html#6-8">6.8</a>) и четвертого  (<a href="http://www.physchem.chimfak.sfedu.ru/Source/NumMethods/ODE.html#6-9">6.9</a>) порядков решить задачу  (<a href="http://www.physchem.chimfak.sfedu.ru/Source/NumMethods/ODE.html#6-5">6.5</a>) с шагом <span class="Var">h</span>=0.1:</p>
+  <p><i><u>Решение:</u></i></p>
+  <p>Для алгоритма третьего порядка (для узла <span class="Var">x</span>=0.1) вычисления таковы:</p>
+  <p><img width="220" height="24" src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/image108.gif"></p>
+  <p><img width="501" height="76" src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/image110.gif"></p>
+  <p><img width="447" height="45" src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/image112.gif"></p>
+  <p>Для алгоритма четвертого порядка &nbsp;(для узла <span class="Var">x</span>=0.1) вычисления таковы:</p>
+  <p><img width="220" height="24" src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/image114.gif"></p>
+  <p><img width="475" height="96" src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/image116.gif"></p>
+  <p><img width="465" height="24" src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/image118.gif"></p>
+  <p><img width="533" height="67" src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/image120.gif"> </p>
+  <p>Приведем таблицу решения с шагом интегрирования <span class="Var">h</span>=0,1 методов Рунге-Кутты
+    3-го (РК3) и четвертого (РК4) порядков на интегрвале <span class="Var">[0,1]</span> и их относительные отклонения от точного решения.</p>
+  	  <table border="1" cellspacing="0" cellpadding="0" width="393" class="tab_2 TabPage" align="center">
+    <tbody><tr>
+      <th width="72" rowspan="2" valign="bottom" nowrap="" class="auto-style3">x</th>
+      <th width="151" nowrap="" colspan="2" valign="bottom" class="auto-style2">РК3</th>
+      <th width="171" nowrap="" colspan="2" valign="bottom" class="auto-style2">РК4</th>
+    </tr>
+    <tr>
+      <th valign="bottom" nowrap="" class="auto-style3">y</th>
+      <th nowrap="" valign="bottom" class="auto-style2">отн.погр.</th>
+      <th valign="bottom" nowrap="" class="auto-style3">y</th>
+      <th nowrap="" valign="bottom" class="auto-style2">отн.погр.</th>
+    </tr>
+    <tr>
+      <td nowrap="" valign="bottom">0</td>
+      <td nowrap="" valign="bottom">0</td>
+      <td nowrap="" valign="bottom">&nbsp;</td>
+      <td nowrap="" valign="bottom">0</td>
+      <td nowrap="" valign="bottom">&nbsp;</td>
+    </tr>
+    <tr>
+      <td nowrap="" valign="bottom">0,1</td>
+      <td nowrap="" valign="bottom">0,00483333</td>
+      <td nowrap="" valign="bottom">0,08444%</td>
+      <td nowrap="" valign="bottom">0,0048375</td>
+      <td nowrap="" valign="bottom">0,00169%</td>
+    </tr>
+    <tr>
+      <td nowrap="" valign="bottom">0,2</td>
+      <td nowrap="" valign="bottom">0,01872336</td>
+      <td nowrap="" valign="bottom">0,03946%</td>
+      <td nowrap="" valign="bottom">0,0187309</td>
+      <td nowrap="" valign="bottom">0,00079%</td>
+    </tr>
+    <tr>
+      <td nowrap="" valign="bottom">0,3</td>
+      <td nowrap="" valign="bottom">0,04080819</td>
+      <td nowrap="" valign="bottom">0,02458%</td>
+      <td nowrap="" valign="bottom">0,04081842</td>
+      <td nowrap="" valign="bottom">0,00049%</td>
+    </tr>
+    <tr>
+      <td nowrap="" valign="bottom">0,4</td>
+      <td nowrap="" valign="bottom">0,07030794</td>
+      <td nowrap="" valign="bottom">0,01721%</td>
+      <td nowrap="" valign="bottom">0,07032029</td>
+      <td nowrap="" valign="bottom">0,00035%</td>
+    </tr>
+    <tr>
+      <td nowrap="" valign="bottom">0,5</td>
+      <td nowrap="" valign="bottom">0,10651697</td>
+      <td nowrap="" valign="bottom">0,01285%</td>
+      <td nowrap="" valign="bottom">0,10653093</td>
+      <td nowrap="" valign="bottom">0,00026%</td>
+    </tr>
+    <tr>
+      <td nowrap="" valign="bottom">0,6</td>
+      <td nowrap="" valign="bottom">0,14879677</td>
+      <td nowrap="" valign="bottom">0,00999%</td>
+      <td nowrap="" valign="bottom">0,14881193</td>
+      <td nowrap="" valign="bottom">0,00020%</td>
+    </tr>
+    <tr>
+      <td nowrap="" valign="bottom">0,7</td>
+      <td nowrap="" valign="bottom">0,19656961</td>
+      <td nowrap="" valign="bottom">0,00798%</td>
+      <td nowrap="" valign="bottom">0,19658562</td>
+      <td nowrap="" valign="bottom">0,00016%</td>
+    </tr>
+    <tr>
+      <td nowrap="" valign="bottom">0,8</td>
+      <td nowrap="" valign="bottom">0,24931274</td>
+      <td nowrap="" valign="bottom">0,00651%</td>
+      <td nowrap="" valign="bottom">0,24932929</td>
+      <td nowrap="" valign="bottom">0,00013%</td>
+    </tr>
+    <tr>
+      <td nowrap="" valign="bottom">0,9</td>
+      <td nowrap="" valign="bottom">0,30655314</td>
+      <td nowrap="" valign="bottom">0,00539%</td>
+      <td nowrap="" valign="bottom">0,30656999</td>
+      <td nowrap="" valign="bottom">0,00011%</td>
+    </tr>
+    <tr>
+      <td nowrap="" valign="bottom">1</td>
+      <td nowrap="" valign="bottom">0,36786283</td>
+      <td nowrap="" valign="bottom">0,00451%</td>
+      <td nowrap="" valign="bottom">0,36787977</td>
+      <td nowrap="" valign="bottom">0,00009%</td>
+    </tr>
+  </tbody></table>
+  <p>Как видно, точность
+    решения, полученного методом Рунге-Кутты четвертого порядка, намного превышает
+    точность решения, полученного методом <a href="http://www.physchem.chimfak.sfedu.ru/Source/NumMethods/ODE.html#Hune">Гюна</a> и методом <a href="http://www.physchem.chimfak.sfedu.ru/Source/NumMethods/ODE.html#RK3_form">Рунге-Кутты 3-го порядка</a> (сравнте с данными <a href="http://www.physchem.chimfak.sfedu.ru/Source/NumMethods/ODE.html#Table2">Таблицы 2</a>). При
+    шаге <span class="Var">h</span>&nbsp;=&nbsp;0,1 он позволил точно
+    определить четыре значащие цифры решения, тогда как для достижения такой
+    точности с помощью метода <a href="http://www.physchem.chimfak.sfedu.ru/Source/NumMethods/ODE.html#Euler">Эйлера</a> необходимо взять <span class="Var">h</span>&nbsp;=&nbsp;0,0001, что требует более тысячи
+    (!!!) вычислений функции <span class="Var">F(x,y</span>). При шаге <span class="Var">h&nbsp;</span>=&nbsp;0,05 точность решения в этом узле достигает шести
+    значащих цифр.</p>
+  <p>Высокая точность, вместе с достаточной простотой реализации
+    делает метод Рунге-Кутты четвертого порядка одним из весьма распространенных
+    численных методов решения задачи Коши ОДУ и систем ОДУ первого порядка.</p>
+  <p><b><a name="MultiStep"></a>Многошаговые методы</b></p>
+  <p><b><a name="Adams"></a>Метод Адамса</b></p>
+  <p>Рассмотренные ранее методы (Эйлера, Гюна, Рунге-Кутты)
+    используют значение функции на одном предшествующем шаге, поэтому они относятся
+    к так называемым <i>одношаговым методам</i>.
+    Точность вычислений можно увеличить, если использовать при нахождении &nbsp;решения в некотором узле <span class="Var">x<sub>i</sub></span> информацию о значениях
+    функции, полученных в <i>нескольких</i> (<span class="Var">k</span>) предыдущих узлах сетки
+    интегрирования <span class="Var">(x<sub>i-1</sub>,
+    x<sub>i-2</sub> … x<sub>i-k</sub></span>). </p>
+  <p>Если используются значения в <span class="Var">k</span> предыдущих
+    узлах, то говорят о k-шаговом
+    методе интегрирования уравнения. Одним из способов построения многошаговых
+    методов заключается в следующем. По значениям функции, вычисленным в k предшествующих узлах, строится
+    интерполяционный полином степени <span class="Var">(k-1)</span> - <img src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/image122.gif" width="52" height="24" align="absmiddle">, который используется при интегрировании дифференциального
+    уравнения по выражению (<a href="http://www.physchem.chimfak.sfedu.ru/Source/NumMethods/ODE.html#6-3">6.3</a>). Интеграл при этом выражается
+    через квадратурную формулу:</p>
+  <p><img width="479" height="57" src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/image124.gif">, </p>
+  <p>где<span class="Var"> &#955;<i><sub>l</sub></i> </span>&nbsp;– квадратурные коэффициенты. </p>
+		<p>Очевидно, что при<span class="Var"> k</span>=1 в качестве частного случая получается 
+		уже известная нам&nbsp; <a href="http://www.physchem.chimfak.sfedu.ru/Source/NumMethods/ODE.html#6-5">формула Эйлера</a>. Значения квадратурных коэффициентов 
+		для <span class="Var">k</span> от 2 до 4 приведены в таблице.</p>
+  <div align="center">
+      <table border="1" cellspacing="0" cellpadding="0" class="tab_2 TabPage" align="center">
+      <tbody><tr>
+        <th width="40" valign="top" class="auto-style3">k</th>
+        <th width="208" colspan="4" valign="top" class="auto-style3">&#955;<i><sub>l</sub></i></th>
+      </tr>
+      <tr>
+        <td width="40" valign="top">2</td>
+        <td width="51" valign="top">3/2</td>
+        <td width="58" valign="top">-1/2</td>
+        <td width="51" valign="top">&nbsp;</td>
+        <td width="48" valign="top">&nbsp;</td>
+      </tr>
+      <tr>
+        <td width="40" valign="top">3</td>
+        <td width="51" valign="top">23/12</td>
+        <td width="58" valign="top">-16/12</td>
+        <td width="51" valign="top">5/12</td>
+        <td width="48" valign="top">&nbsp;</td>
+      </tr>
+      <tr>
+        <td width="40" valign="top">4</td>
+        <td width="51" valign="top">55/24</td>
+        <td width="58" valign="top">-59/24</td>
+        <td width="51" valign="top">37/24</td>
+        <td width="48" valign="top">-9/24</td>
+      </tr>
+    </tbody></table>
+  </div>
+  <p>Полученное таким образом семейство формул называется <i>явной <span class="Var">k</span>-шаговой
+    схемой Адамса </i>(<i>методы Адамса-Башфорта</i>). </p>
+		<p>Например, четырехшаговая явная формула Адамса может быть записана так:</p>
+		<p><img alt="" src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/img15.gif"></p>
+		<p>Если для построения интерполяционного полинома использовать k узлов, начиная с x<sub><em>i</em>+1</sub>, 
+		то можно получить формулы интегрирования ОДУ, известные как неявные 
+		схемы Адамса (или методы <em>Адамса-Моултона</em>). Неявными эти формулы 
+		называются потому, что значение искомой функции в (i+1)-м узле -&nbsp; y<sub><em>i</em>+1</sub> 
+		- оказывается одновременно и в левой и 
+		правой частях равенства.</p>
+  <p><img alt="" src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/img17.gif"></p>
+		<p>Квадратурные коэффициенты для неявных методов Адамса приведены в 
+		таблице ниже.</p>
+  <div align="center">
+      <table border="1" cellspacing="0" cellpadding="0" class="tab_2 TabPage" align="center">
+      <tbody><tr>
+        <th width="40" valign="top" class="auto-style3">k</th>
+        <th width="208" colspan="4" valign="top" class="auto-style3">&#955;<i><sub>l</sub></i></th>
+      </tr>
+      <tr>
+        <td width="40" valign="top">2</td>
+        <td width="51" valign="top">1/2</td>
+        <td width="58" valign="top">1/2</td>
+        <td width="51" valign="top">&nbsp;</td>
+        <td width="48" valign="top">&nbsp;</td>
+      </tr>
+      <tr>
+        <td width="40" valign="top">3</td>
+        <td width="51" valign="top">5/12</td>
+        <td width="58" valign="top">8/12</td>
+        <td width="51" valign="top">-1/12</td>
+        <td width="48" valign="top">&nbsp;</td>
+      </tr>
+      <tr>
+        <td width="40" valign="top">4</td>
+        <td width="51" valign="top">9/24</td>
+        <td width="58" valign="top">19/24</td>
+        <td width="51" valign="top">-5/24</td>
+        <td width="48" valign="top">1/24</td>
+      </tr>
+    </tbody></table>
+  </div>
+  <p>Например, четырехшаговая неявная формула Адамса-Моултона имеет вид:</p>
+		<p>
+		<img alt="" src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/img19.gif"></p>
+		<p>
+		<o:p>Видно, что это выражение является уравнением относительно&nbsp; y<sub><em>i</em>+1</sub>, 
+		так как&nbsp;&nbsp; y<sub><em>i</em>+1</sub> встречается и в левой и 
+		правой его части. Однако обычно это уравнение не решается, а значение в 
+		правой части заменяется на рассчитанное по какой-либо явной формуле - 
+		например, формуле Адамса-Башфорта. Такой подход лежит в основе
+		<a href="http://www.physchem.chimfak.sfedu.ru/Source/NumMethods/ODE.html#Prognoz">методов "прогноза-коррекции"</a>.</o:p></p>
+		<p>Достоинством многошаговых методов Адамса при решении ОДУ заключается в том, что
+    в каждом узле рассчитывается только одно значение правой части ОДУ - функции <span class="Var">F(x,y</span>). К
+    недостаткам можно отнести невозможность старта многошагового метода из единственной
+    начальной точки, так как для вычислений по <span class="Var">k</span>-шаговой формуле необходимо знание значения функции в <span class="Var">k</span> узлах. Поэтому приходится <span class="Var">(k-1)</span> решение в первых узлах <span class="Var">x<sub>1</sub>, x<sub>2</sub>, …, x<sub>k-1</sub></span> получать
+    с помощью какого-либо одношагового метода, например метода <a href="http://www.physchem.chimfak.sfedu.ru/Source/NumMethods/ODE.html#RK4_form">Рунге-Кутты 4–го порядка</a>. </p>
+  <p>Другой проблемой является невозможность изменения шага в
+    процессе решения, что легко реализуется в одношаговых методах.</p>
+  <p><b><a name="Prognoz"></a>Методы прогноза и коррекции</b></p>
+  <p>Несколько иной подход используется в многошаговых методах <i>прогноза и коррекции</i>. В качестве
+    иллюстрирующего примера рассмотрим 2-х шаговый метод прогноза и коррекции. <br>
+    Пусть дано ДУ&nbsp; для которого известно
+    значение функции в двух соседних узлах сетки:</p>
+  <p><img width="284" height="45" src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/image126.gif"></p>
+  <p>Сначала строится <i>прогноз </i>значения в <span class="Var">(i+1)</span>-ом
+    узле интегрирования по какой-либо грубой&nbsp; формуле (при <span class="Var">k</span>=2 это метод Эйлера) по предудущему узлу. </p>
+  <p><img width="273" height="31" src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/image128.gif"></p>
+  <p>Затем это значение <i>корректируется </i>по более точной формуле, в данном случае – по формуле трапеций 
+  (<em>неявная</em> формула Адамса второго порядка)</p>
+  <p><img width="339" height="45" src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/image130.gif"></p>
+  <p>В качестве решения в
+    узле <span class="Var">x<sub>i+1</sub></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/image132.gif" width="91" height="24" align="absmiddle"> берется</p>
+  <p><img width="100" height="24" src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/image134.gif"></p>
+  <p>где <span class="Var">E<sub>c</sub>&nbsp;</span>-&nbsp;ошибка коррекции</p>
+  <p><img width="105" height="45" src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/image136.gif"></p>
+  <p>Для того чтобы начать расчет методом прогноза и коррекции,
+    необходимо знать значения функции в двух первых узлах сетки&nbsp; - <span class="Var">x<sub>0</sub></span>&nbsp; и <span class="Var">x<sub>1</sub></span>&nbsp; - <img src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/image138.gif" width="145" height="24" align="absmiddle">. Обычно значение в узле <span class="Var">x<sub>1</sub> </span>определяется каким-либо
+    одношаговым методом (<a href="http://www.physchem.chimfak.sfedu.ru/Source/NumMethods/ODE.html#Runge">методом Рунге-Кутты</a> или <a href="http://www.physchem.chimfak.sfedu.ru/Source/NumMethods/ODE.html#Hune">Гюна</a>).</p>
+  <p>На каждом шаге построения решения методом прогноза и
+    коррекции требуется вычислить всего одно значение функции, а одно берется из предыдущего узла сетки. Поэтому
+    он весьма экономичен по затратам времени вычислений при достаточной точности.</p>
+  <p>Погрешность описываемого метода пропорциональна <span class="Var">h<sup>3</sup></span>&#8195;(d&nbsp;~&nbsp;<span class="Var">h<sup>3</sup></span>).</p>
+  <p>Аналогичные схемы прогноза-коррекции могут быть получены сочетанием явных 
+  (прогноз) и неявных (коррекция) формул Адамса для различных k. Так, например, широко применяется четырехшаговый метод 
+  прогноза-коррекции, в котором в качестве прогноза используется&nbsp; 4-х шаговая формула <a href="http://www.physchem.chimfak.sfedu.ru/Source/NumMethods/ODE.html#Adams">Адамса-Башфорта</a>, а для коррекции - 4-х шаговая формула Адамса-Моултона. 
+  Погрешность такого метода пропорциональна ~h<sup>5</sup>.</p>
+  <p><i><u>Пример:</u></i></p>
+  <p>С использованием алгоритма прогноза и коррекции второго порядка решить ДУ &nbsp;в точке <span class="Var">x<sub>2</sub></span>&nbsp;=&nbsp;0,2 при <span class="Var">h</span>&nbsp;=&nbsp;0,1 со следующими
+    начальными значениями:</p>
+  <p><img width="357" height="44" src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/image140.gif"></p>
+  <p><i><u>Решение:</u></i></p>
+  <p>При h&nbsp;=&nbsp;0,1
+    получаем</p>
+  <p><img width="387" height="257" src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/image142.gif"></p>
+  <p>Аналитическое решение уравнения (с точностью до 9 знака после запятой) дает значение <span class="Var">
+  <br>y</span>(0,2)&nbsp;=0,018730753.
+    Относительная погрешность составляет 0,049%.</p>
+  <p><b><a name="ODE_system"></a>Решение задачи Коши для систем дифференциальных уравнений 1-го порядка</b></p>
+  <p>Системой <span class="Var">M</span> дифференциальных
+    уравнений первого порядка в общем случае можно назвать следующую совокупность Обыкновенных
+    дифференциальных уравнений:</p>
+  <p><img width="211" height="79" src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/image144.gif">,</p>
+  <p>Где <img src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/image146.gif" width="132" height="24" align="absmiddle">&nbsp;есть некоторые
+    функции независимой переменной <span class="Var">х</span>, причем правые части уравнений не зависят от
+    производных <span class="Var">y<sub>i</sub>(x)</span>, то есть все уравнения
+    разрешены относительно производных функций.</p>
+  <p>Начальными условиями при решения задачи Коши для такой
+    системы будут являться значение независимой переменной и значения всех <span class="Var">M</span> функций при этом значении:</p>
+  <p><img width="311" height="24" src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/image148.gif"></p>
+  <p>Все описанные ранее методы решения задачи Коши для уравнений
+    легко обобщаются на случай решения систем ДУ первого порядка. Формулы выбранного метода применяются
+    последовательно к каждому уравнению системы уравнений для определения значения
+    соответствующей функции. Из первого уравнения определяется значение<span class="Var"> y</span><sub><span class="auto-style1">1</span><span class="Var">i</span></sub>, из второго – <span class="Var">y</span><sub><span class="auto-style1">2</span><span class="Var">i</span></sub> , …, из <span class="Var">M</span>-го  - <span class="Var">y<sub>Mi</sub></span>.</p>
+		<p><a name="ODE-sys-RK4"></a>В качестве примера рассмотрим применение
+		<a href="http://www.physchem.chimfak.sfedu.ru/Source/NumMethods/ODE.html#Runge">метода Рунге-Кутты</a> 4-го порядка для решения системы 
+		двух ОДУ первого порядка.</p>
+		<p><a name="sys_ODE2"></a><img alt="" src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/imgA2.gif"></p>
+		<p>Адаптируем формулу <a href="http://www.physchem.chimfak.sfedu.ru/Source/NumMethods/ODE.html#RK4_form">Рунге-Кутты 4-го порядка</a> 
+		для данной системы уравнений. Из первого уравнения будем вычислять 
+		значения функции <em class="Var">u</em>(<em>x</em>), а из второго – 
+		функции <em class="Var">v</em>(<em>x</em>) (это функции, чьи производные 
+		стоят в левой части соотетствующих уравнений):</p>
+		<p><img alt="" src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/imgA4.gif"></p>
+		<p>Аналогично для второго:</p>
+		<p><img alt="" src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/imgA6.gif"></p>
+		<p>С учетом вышесказанного, для расчета коэффициентов <em>k</em><sub>u0</sub> 
+		- <em>k</em><sub>u3</sub> используем правую часть первого уравнения (<span class="Var"><em>F</em></span><sub>1</sub>), 
+		а для коэффициентов <em>k</em><sub>v0</sub> - <em>k<sub>v</sub></em><sub>3</sub> 
+		- второго (<em class="Var">F</em><sub>2</sub>). Кроме этого, для расчета 
+		приращения функции <span class="Var">u</span> используем коэффициенты
+		<em>k</em><sub>u</sub>, а для расчета приращения функции <em class="Var">
+		v</em> - <em>k<sub>v</sub></em>. Таким образом, коэффициенты 
+		рассчитываются по следующим формулам:</p>
+		<p><img alt="" src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/imgAC.gif"></p>
+		<p><img alt="" src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/imgAE.gif"></p>
+		<p><img alt="" src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/imgB0.gif"></p>
+		<p><img alt="" src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/imgB2.gif"></p>
+		<p><strong><em>Модель "хищник-жертва"</em></strong></p>
+		<p>Примером задачи, сводимой к системе нелинейных дифференциальных 
+		уравнений 1-го порядка, является задача "хищник — жертва" (<a href="http://ru.wikipedia.org/wiki/%25D0%259C%25D0%25BE%25D0%25B4%25D0%25B5%25D0%25BB%25D1%258C_%25D0%259B%25D0%25BE%25D1%2582%25D0%25BA%25D0%25B8_%25E2%2580%2594_%25D0%2592%25D0%25BE%25D0%25BB%25D1%258C%25D1%2582%25D0%25B5%25D1%2580%25D1%2580%25D0%25B0">модель Л&#243;тки-Вольт&#233;рры</a>). 
+		Данная модель довольно широко применяется при описании временной 
+		зависимости объема популяций в биологических системах, при моделировании 
+		экономических и физических процессов. <br>Задача формулируется следующим 
+		образом. Пусть в системе в некоторый момент времени <span class="Var">t</span> 
+		имеются хищники (например, волки) в количестве <span class="Var">v</span>(<span class="Var">t</span>) 
+		и жертвы (например, зайцы) в количестве <span class="Var">u</span>(<span class="Var">t</span>). 
+		Модель "хищник — жертва" утверждает, что <span class="Var">u</span>(<span class="Var">t</span>) 
+		и <span class="Var">v</span>(<span class="Var">t</span>) удовлетворяют 
+		системе ОДУ первого порядка:</p>
+		<p>
+		<a name="sys_predator"></a>
+		<img alt="" src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/imgBA.gif"></p>
+		<p>Где <span class="Var">A</span>, <span class="Var">B</span>,
+		<span class="Var">C</span> и <span class="Var">D</span> – некоторые 
+		числовые константы.<br>Действительно, если зайцы имеют достаточно травы 
+		для питания, то скорость роста популяции будет прямо пропорциональна их 
+		числу (первое слагаемое в первом уравнении). Второе слагаемое описывает 
+		гибель зайцев при встрече с хищниками, так как вероятность их встречи 
+		равна произведению&nbsp; 
+		<span style="position:relative;top:6.5pt"><img alt="" src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/imgBC.gif"></span>. 
+		Второе уравнение описывает изменение популяции хищников. Скорости роста популяции 
+		способствует их хорошее питание (первое слагаемое второго уравнения пропорционально 
+		вероятности встречи хищника и жертвы - 
+		<span style="position:relative;top:6.5pt"><img alt="" src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/imgBC.gif"></span>), 
+		а избыток хищников приводит к их гибели за счет голода (второе 
+		слагаемое).</p>
+		<p>Применим метод Рунге-Кутты 4-го порядка для решения полученной 
+		системы уравнений. Сравнивая <a href="http://www.physchem.chimfak.sfedu.ru/Source/NumMethods/ODE.html#sys_predator">решаемую систему
+		</a>&nbsp;и систему, записанную в <a href="http://www.physchem.chimfak.sfedu.ru/Source/NumMethods/ODE.html#sys_ODE2">стандартной форме</a>, 
+		заметим, что:</p>
+		<p><img alt="" src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/imgCF.gif"></p>
+		<p><img alt="" src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/imgD1.gif"></p>
+		<p>Тогда выражения для расчета коэффициентов&nbsp; <em>k</em><sub>u0</sub> 
+		- <em>k</em><sub>u3</sub> и <em>k</em><sub>v0</sub> - <em>k<sub>v</sub></em><sub>3</sub> 
+		принимают следующий вид:</p>
+		<p><img alt="" src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/imgD7.gif"></p>
+		<p><img alt="" src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/imgD9.gif"></p>
+		<p><img alt="" src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/imgDB.gif"></p>
+		<p><img alt="" src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/imgDD.gif"></p>
+		<p><img alt="" src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/imgDF.gif"></p>
+		<p><img alt="" src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/imgE1.gif"></p>
+		<p><img alt="" src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/imgE3.gif"></p>
+		<p><img alt="" src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/imgE5.gif"> </p>
+		<p>Значения функций <span class="Var">u</span> и <span class="Var">v</span> 
+		находятся по уже известным формулам:</p>
+		<p><img alt="" src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/imgA4.gif"></p>
+		<p><img alt="" src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/imgA6.gif"></p>
+  <p><b><i><a name="ODE_high"></a>Решение задачи Коши для дифференциальных
+    уравнений второго и более высоких порядков</i></b></p>
+  <p>Задачу Коши для ОДУ второго порядка </p>
+  <p><img width="109" height="23" src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/image150.gif">, <img width="181" height="24" src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/image152.gif"></p>
+  <p>можно свести к решению системы двух ДУ первого порядка, если
+    ввести некоторую функцию <img src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/image154.gif" width="88" height="23" align="absmiddle"></p>
+  <p>тогда <img src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/image156.gif" width="95" height="23" align="absmiddle">&nbsp;&nbsp;и система примет вид</p>
+  <p><img width="131" height="53" src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/image158.gif">&nbsp; при начальных
+    условиях&nbsp; <img src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/image160.gif" width="241" height="24" align="absmiddle"></p>
+  <p>Аналогично, ОДУ порядка <span class="Var">n</span> сведется к системе из <span class="Var">n</span> дифференциальных уравнений первого порядка.</p>
+		<p><strong><em>Движение тела под действием пружины</em></strong><br>
+		Рассмотрим некоторое материальное тело массой <span class="Var">m</span>, 
+		которое движется по горизонтальной поверхности (в общем случае – с 
+		трением) под действием пружины.</p>
+		<p><img alt="" src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/imgF2.gif"></p>
+		<p>Сила упругого сжатия (растяжения) пружины описывается законом Гука и 
+		пропорциональна смещению тела от положения равновесия пружины (<span class="Var">x
+		</span>= 0):</p>
+		<p><img alt="" src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/imgF4.gif"></p>
+		<p>k – коэффициент жесткости пружины.<br>Сила трения направлена всегда 
+		против движения тела и пропорциональна его скорости:</p>
+		<p><img src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/imgF6.gif"></p>
+		<p><span class="Var">с</span> – коэффициент трения.<br>Баланс сил, 
+		действующих на тело в каждый момент времени можно записать так:</p>
+		<p><img alt="" src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/imgF8.gif"></p>
+		<p>С учетом того, что координата тела есть функция от времени, а 
+		скорость и ускорение – это первая и вторая производная координаты во 
+		времени, соответственно, получим:</p>
+		<p><img alt="" src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/imgFA.gif"></p>
+		<p>Таким образом, изменение координаты тела от времени описывается ОДУ 
+		2-го порядка, которое в стандартном виде записывается так:</p>
+		<p><img alt="" src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/imgFC.gif"></p>
+		<p>Начальными условиями в данной задачи являются значения координаты 
+		тела и его скорости в начальный момент времени (t = 0):</p>
+		<p><img alt="" src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/imgFE.gif"></p>
+		<p>Как было показано, ОДУ 2-го порядка сводится к системе двух уравнений 
+		1-го порядка подстановкой:</p>
+		<p><img alt="" src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/img100.gif"></p>
+		<p><img alt="" src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/img102.gif"></p>
+		<p>Окончательно система ОДУ принимает вид: </p>
+		<p><img alt="" src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/img108.gif"></p>
+		<p>с начальными условиями </p>
+		<p><img alt="" src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/img10A.gif"></p>
+		<p>Применим метод Рунге-Кутты 4-го порядка для решения полученной 
+		системы уравнений. Правые части уравненией имеют вид:</p>
+		<p><img alt="" src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/img10C.gif"></p>
+		<p><img alt="" src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/img10E.gif"></p>
+		<p>Из первого уравнения рассчитываем значения функции <span class="Var">
+		x</span>(<span class="Var">t</span>), из второго – <span class="Var">v</span>(<span class="Var">t</span>).</p>
+		<p><img alt="" src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/img112.gif"></p>
+		<p><img alt="" src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/img114.gif"></p>
+		<p>Теперь запишем соответствующие выражения для расчета коэффициентов
+		<span class="Var">k</span><sub>x0</sub> – <span class="Var">k</span><sub>x3</sub> 
+		и <span class="Var">k</span><sub>v0</sub> - <span class="Var">k</span><sub>v3</sub>.</p>
+		<p><img alt="" src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/img116.gif"></p>
+		<p><img alt="" src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/img118.gif"></p>
+		<p><img alt="" src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/img11A.gif"></p>
+		<p><img alt="" src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/img11E.gif"></p>
+		<p><img alt="" src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/img120.gif"></p>
+		<p><img alt="" src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/img122.gif"></p>
+		<p><img alt="" src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/img124.gif"></p>
+		<p><img alt="" src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/img126.gif"></p>
+		<p>&nbsp;</p>
+  <p>Решение других проблем, связанных с дифференциальными
+    уравнениями – задачи с граничными условиями и задачи на собственные значения и
+    функции в данном курсе не рассматриваются.</p>
+  <p class="top3"><b>Химические задачи, сводящиеся к
+    решению ДУ</b></p>
+  <p class="top2"><strong>Кинетика химических реакций</strong></p>
+  <p>Пример:</p>
+  <p>Кинетическая система &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </p>
+  <p><img width="105" height="61" src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/image162.gif">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </p>
+  <p><img width="180" height="45" src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/image164.gif"></p>
+  <p><img width="180" height="45" src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/image166.gif"></p>
+  <p><img width="223" height="45" src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/image168.gif"></p>
+  <p><img width="96" height="45" src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/image170.gif"></p>
+  <p>для которой&nbsp;&nbsp; <span class="Var">k<sub>1</sub></span> и <span class="Var">k<sub>2</sub></span>&nbsp;&nbsp;<span class="Var">k<sub>3</sub></span>&nbsp;&nbsp;-&nbsp;константы скорости
+    реакций:</p>
+  <p>Решение системы из четырех ДУ зависит от начальных значений
+    концентраций веществ</p>
+  <p class="Var">t<sub>0</sub>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A(t<sub>0</sub>)&nbsp;&nbsp;&nbsp; B(t<sub>0</sub>)&nbsp;&nbsp;&nbsp;&nbsp; C(t<sub>0</sub>)&nbsp;&nbsp;&nbsp; D(t<sub>0</sub>)</p>
+  <p>и от констант скоростей реакций <span class="Var">k<sub>1</sub>, k<sub>2</sub> и k<sub>3</sub></span>.</p>
+        <p class="text"><a href="http://www.physchem.chimfak.sfedu.ru/Source/NumMethods/ODE.html#Top"><b>В
+        начало страницы</b></a></p>
+
+        <p class="text">
+<!--Top100 logo-->
+<a href="http://top100.rambler.ru/top100/" target="_blank">
+<img src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/banner-88x31-rambler-darkblue2.gif" alt="Rambler&#39;s Top100" width="88" height="31" border="0"></a>
+<!-- Rating@Mail.ru logo-->
+<a href="http://top.mail.ru/jump?from=2198990">
+<img src="./Кафедра физхимии ЮФУ(РГУ) - _Численные методы и программирование__files/counter" style="border:0;" height="31" width="88" alt="Рейтинг@Mail.ru"></a>
+<!-- //Rating@Mail.ru logo -->
+        </p>
+
+      </td>
+    </tr>
+  </tbody></table>
+</div>
+
+<p class="cop" style="margin-top: 0">&nbsp;</p>
+
+</body></html>

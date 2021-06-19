@@ -1,0 +1,65 @@
+D:\PKS\COVID-19_Весна_2021\ConsoleTestSet\ConsoleTestSet\bin\Debug\netcoreapp3.1\ConsoleTestSet.exe
+D:\PKS\COVID-19_Весна_2021\ConsoleTestSet\ConsoleTestSet\bin\Debug\netcoreapp3.1\ConsoleTestSet.deps.json
+D:\PKS\COVID-19_Весна_2021\ConsoleTestSet\ConsoleTestSet\bin\Debug\netcoreapp3.1\ConsoleTestSet.runtimeconfig.json
+D:\PKS\COVID-19_Весна_2021\ConsoleTestSet\ConsoleTestSet\bin\Debug\netcoreapp3.1\ConsoleTestSet.runtimeconfig.dev.json
+D:\PKS\COVID-19_Весна_2021\ConsoleTestSet\ConsoleTestSet\bin\Debug\netcoreapp3.1\ConsoleTestSet.dll
+D:\PKS\COVID-19_Весна_2021\ConsoleTestSet\ConsoleTestSet\bin\Debug\netcoreapp3.1\ConsoleTestSet.pdb
+D:\PKS\COVID-19_Весна_2021\ConsoleTestSet\ConsoleTestSet\obj\Debug\netcoreapp3.1\ConsoleTestSet.csprojAssemblyReference.cache
+D:\PKS\COVID-19_Весна_2021\ConsoleTestSet\ConsoleTestSet\obj\Debug\netcoreapp3.1\ConsoleTestSet.AssemblyInfoInputs.cache
+D:\PKS\COVID-19_Весна_2021\ConsoleTestSet\ConsoleTestSet\obj\Debug\netcoreapp3.1\ConsoleTestSet.AssemblyInfo.cs
+D:\PKS\COVID-19_Весна_2021\ConsoleTestSet\ConsoleTestSet\obj\Debug\netcoreapp3.1\ConsoleTestSet.csproj.CoreCompileInputs.cache
+D:\PKS\COVID-19_Весна_2021\ConsoleTestSet\ConsoleTestSet\obj\Debug\netcoreapp3.1\ConsoleTestSet.dll
+D:\PKS\COVID-19_Весна_2021\ConsoleTestSet\ConsoleTestSet\obj\Debug\netcoreapp3.1\ConsoleTestSet.pdb
+D:\PKS\COVID-19_Весна_2021\ConsoleTestSet\ConsoleTestSet\obj\Debug\netcoreapp3.1\ConsoleTestSet.genruntimeconfig.cache
+C:\Users\Год\Desktop\consol\Старостин 4217А\ConsoleTestSet\ConsoleTestSet\bin\Debug\netcoreapp3.1\ConsoleTestSet.exe
+C:\Users\Год\Desktop\consol\Старостин 4217А\ConsoleTestSet\ConsoleTestSet\bin\Debug\netcoreapp3.1\ConsoleTestSet.deps.json
+C:\Users\Год\Desktop\consol\Старостин 4217А\ConsoleTestSet\ConsoleTestSet\bin\Debug\netcoreapp3.1\ConsoleTestSet.runtimeconfig.json
+C:\Users\Год\Desktop\consol\Старостин 4217А\ConsoleTestSet\ConsoleTestSet\bin\Debug\netcoreapp3.1\ConsoleTestSet.runtimeconfig.dev.json
+C:\Users\Год\Desktop\consol\Старостин 4217А\ConsoleTestSet\ConsoleTestSet\bin\Debug\netcoreapp3.1\ConsoleTestSet.dll
+C:\Users\Год\Desktop\consol\Старостин 4217А\ConsoleTestSet\ConsoleTestSet\bin\Debug\netcoreapp3.1\ConsoleTestSet.pdb
+C:\Users\Год\Desktop\consol\Старостин 4217А\ConsoleTestSet\ConsoleTestSet\obj\Debug\netcoreapp3.1\ConsoleTestSet.csprojAssemblyReference.cache
+C:\Users\Год\Desktop\consol\Старостин 4217А\ConsoleTestSet\ConsoleTestSet\obj\Debug\netcoreapp3.1\ConsoleTestSet.AssemblyInfoInputs.cache
+C:\Users\Год\Desktop\consol\Старостин 4217А\ConsoleTestSet\ConsoleTestSet\obj\Debug\netcoreapp3.1\ConsoleTestSet.AssemblyInfo.cs
+C:\Users\Год\Desktop\consol\Старостин 4217А\ConsoleTestSet\ConsoleTestSet\obj\Debug\netcoreapp3.1\ConsoleTestSet.csproj.CoreCompileInputs.cache
+C:\Users\Год\Desktop\consol\Старостин 4217А\ConsoleTestSet\ConsoleTestSet\obj\Debug\netcoreapp3.1\ConsoleTestSet.dll
+C:\Users\Год\Desktop\consol\Старостин 4217А\ConsoleTestSet\ConsoleTestSet\obj\Debug\netcoreapp3.1\ConsoleTestSet.pdb
+C:\Users\Год\Desktop\consol\Старостин 4217А\ConsoleTestSet\ConsoleTestSet\obj\Debug\netcoreapp3.1\ConsoleTestSet.genruntimeconfig.cache
+C:\Users\Год\Desktop\4sem\Старостин 4217А\ConsoleTestSet\ConsoleTestSet\bin\Debug\netcoreapp3.1\ConsoleTestSet.exe
+C:\Users\Год\Desktop\4sem\Старостин 4217А\ConsoleTestSet\ConsoleTestSet\bin\Debug\netcoreapp3.1\ConsoleTestSet.deps.json
+C:\Users\Год\Desktop\4sem\Старостин 4217А\ConsoleTestSet\ConsoleTestSet\bin\Debug\netcoreapp3.1\ConsoleTestSet.runtimeconfig.json
+C:\Users\Год\Desktop\4sem\Старостин 4217А\ConsoleTestSet\ConsoleTestSet\bin\Debug\netcoreapp3.1\ConsoleTestSet.runtimeconfig.dev.json
+C:\Users\Год\Desktop\4sem\Старостин 4217А\ConsoleTestSet\ConsoleTestSet\bin\Debug\netcoreapp3.1\ConsoleTestSet.dll
+C:\Users\Год\Desktop\4sem\Старостин 4217А\ConsoleTestSet\ConsoleTestSet\bin\Debug\netcoreapp3.1\ConsoleTestSet.pdb
+C:\Users\Год\Desktop\4sem\Старостин 4217А\ConsoleTestSet\ConsoleTestSet\obj\Debug\netcoreapp3.1\ConsoleTestSet.csprojAssemblyReference.cache
+C:\Users\Год\Desktop\4sem\Старостин 4217А\ConsoleTestSet\ConsoleTestSet\obj\Debug\netcoreapp3.1\ConsoleTestSet.AssemblyInfoInputs.cache
+C:\Users\Год\Desktop\4sem\Старостин 4217А\ConsoleTestSet\ConsoleTestSet\obj\Debug\netcoreapp3.1\ConsoleTestSet.AssemblyInfo.cs
+C:\Users\Год\Desktop\4sem\Старостин 4217А\ConsoleTestSet\ConsoleTestSet\obj\Debug\netcoreapp3.1\ConsoleTestSet.csproj.CoreCompileInputs.cache
+C:\Users\Год\Desktop\4sem\Старостин 4217А\ConsoleTestSet\ConsoleTestSet\obj\Debug\netcoreapp3.1\ConsoleTestSet.dll
+C:\Users\Год\Desktop\4sem\Старостин 4217А\ConsoleTestSet\ConsoleTestSet\obj\Debug\netcoreapp3.1\ConsoleTestSet.pdb
+C:\Users\Год\Desktop\4sem\Старостин 4217А\ConsoleTestSet\ConsoleTestSet\obj\Debug\netcoreapp3.1\ConsoleTestSet.genruntimeconfig.cache
+C:\Users\Год\Desktop\4sem\Старостин 4217А (1) (1)\ConsoleTestSet\ConsoleTestSet\obj\Debug\netcoreapp3.1\ConsoleTestSet.csprojAssemblyReference.cache
+C:\Users\Год\Desktop\4sem\Старостин 4217А (1) (1)\ConsoleTestSet\ConsoleTestSet\obj\Debug\netcoreapp3.1\ConsoleTestSet.AssemblyInfoInputs.cache
+C:\Users\Год\Desktop\4sem\Старостин 4217А (1) (1)\ConsoleTestSet\ConsoleTestSet\obj\Debug\netcoreapp3.1\ConsoleTestSet.AssemblyInfo.cs
+C:\Users\Год\Desktop\4sem\Старостин 4217А (1) (1)\ConsoleTestSet\ConsoleTestSet\obj\Debug\netcoreapp3.1\ConsoleTestSet.csproj.CoreCompileInputs.cache
+C:\Users\Год\Desktop\4sem\Старостин 4217А (1) (1)\ConsoleTestSet\ConsoleTestSet\obj\Debug\netcoreapp3.1\ConsoleTestSet.dll
+C:\Users\Год\Desktop\4sem\Старостин 4217А (1) (1)\ConsoleTestSet\ConsoleTestSet\obj\Debug\netcoreapp3.1\ConsoleTestSet.pdb
+C:\Users\Год\Desktop\4sem\Старостин 4217А (1) (1)\ConsoleTestSet\ConsoleTestSet\bin\Debug\netcoreapp3.1\ConsoleTestSet.exe
+C:\Users\Год\Desktop\4sem\Старостин 4217А (1) (1)\ConsoleTestSet\ConsoleTestSet\bin\Debug\netcoreapp3.1\ConsoleTestSet.deps.json
+C:\Users\Год\Desktop\4sem\Старостин 4217А (1) (1)\ConsoleTestSet\ConsoleTestSet\bin\Debug\netcoreapp3.1\ConsoleTestSet.runtimeconfig.json
+C:\Users\Год\Desktop\4sem\Старостин 4217А (1) (1)\ConsoleTestSet\ConsoleTestSet\bin\Debug\netcoreapp3.1\ConsoleTestSet.runtimeconfig.dev.json
+C:\Users\Год\Desktop\4sem\Старостин 4217А (1) (1)\ConsoleTestSet\ConsoleTestSet\bin\Debug\netcoreapp3.1\ConsoleTestSet.dll
+C:\Users\Год\Desktop\4sem\Старостин 4217А (1) (1)\ConsoleTestSet\ConsoleTestSet\bin\Debug\netcoreapp3.1\ConsoleTestSet.pdb
+C:\Users\Год\Desktop\4sem\Старостин 4217А (1) (1)\ConsoleTestSet\ConsoleTestSet\obj\Debug\netcoreapp3.1\ConsoleTestSet.genruntimeconfig.cache
+C:\Users\БЛэкс\Desktop\13 05\ConsoleTestSet\ConsoleTestSet\bin\Debug\netcoreapp3.1\ConsoleTestSet.exe
+C:\Users\БЛэкс\Desktop\13 05\ConsoleTestSet\ConsoleTestSet\bin\Debug\netcoreapp3.1\ConsoleTestSet.deps.json
+C:\Users\БЛэкс\Desktop\13 05\ConsoleTestSet\ConsoleTestSet\bin\Debug\netcoreapp3.1\ConsoleTestSet.runtimeconfig.json
+C:\Users\БЛэкс\Desktop\13 05\ConsoleTestSet\ConsoleTestSet\bin\Debug\netcoreapp3.1\ConsoleTestSet.runtimeconfig.dev.json
+C:\Users\БЛэкс\Desktop\13 05\ConsoleTestSet\ConsoleTestSet\bin\Debug\netcoreapp3.1\ConsoleTestSet.dll
+C:\Users\БЛэкс\Desktop\13 05\ConsoleTestSet\ConsoleTestSet\bin\Debug\netcoreapp3.1\ConsoleTestSet.pdb
+C:\Users\БЛэкс\Desktop\13 05\ConsoleTestSet\ConsoleTestSet\obj\Debug\netcoreapp3.1\ConsoleTestSet.csprojAssemblyReference.cache
+C:\Users\БЛэкс\Desktop\13 05\ConsoleTestSet\ConsoleTestSet\obj\Debug\netcoreapp3.1\ConsoleTestSet.AssemblyInfoInputs.cache
+C:\Users\БЛэкс\Desktop\13 05\ConsoleTestSet\ConsoleTestSet\obj\Debug\netcoreapp3.1\ConsoleTestSet.AssemblyInfo.cs
+C:\Users\БЛэкс\Desktop\13 05\ConsoleTestSet\ConsoleTestSet\obj\Debug\netcoreapp3.1\ConsoleTestSet.csproj.CoreCompileInputs.cache
+C:\Users\БЛэкс\Desktop\13 05\ConsoleTestSet\ConsoleTestSet\obj\Debug\netcoreapp3.1\ConsoleTestSet.dll
+C:\Users\БЛэкс\Desktop\13 05\ConsoleTestSet\ConsoleTestSet\obj\Debug\netcoreapp3.1\ConsoleTestSet.pdb
+C:\Users\БЛэкс\Desktop\13 05\ConsoleTestSet\ConsoleTestSet\obj\Debug\netcoreapp3.1\ConsoleTestSet.genruntimeconfig.cache

@@ -1,0 +1,91 @@
+D:\PKS\COVID-19_Весна_2021\ConsoleChisMethod\ConsoleChisMethod\obj\Debug\netcoreapp3.1\ConsoleChisMethod.csprojAssemblyReference.cache
+D:\PKS\COVID-19_Весна_2021\ConsoleChisMethod\ConsoleChisMethod\obj\Debug\netcoreapp3.1\ConsoleChisMethod.AssemblyInfoInputs.cache
+D:\PKS\COVID-19_Весна_2021\ConsoleChisMethod\ConsoleChisMethod\obj\Debug\netcoreapp3.1\ConsoleChisMethod.AssemblyInfo.cs
+D:\PKS\COVID-19_Весна_2021\ConsoleChisMethod\ConsoleChisMethod\obj\Debug\netcoreapp3.1\ConsoleChisMethod.csproj.CoreCompileInputs.cache
+D:\PKS\COVID-19_Весна_2021\ConsoleChisMethod\ConsoleChisMethod\bin\Debug\netcoreapp3.1\ConsoleChisMethod.exe
+D:\PKS\COVID-19_Весна_2021\ConsoleChisMethod\ConsoleChisMethod\bin\Debug\netcoreapp3.1\ConsoleChisMethod.deps.json
+D:\PKS\COVID-19_Весна_2021\ConsoleChisMethod\ConsoleChisMethod\bin\Debug\netcoreapp3.1\ConsoleChisMethod.runtimeconfig.json
+D:\PKS\COVID-19_Весна_2021\ConsoleChisMethod\ConsoleChisMethod\bin\Debug\netcoreapp3.1\ConsoleChisMethod.runtimeconfig.dev.json
+D:\PKS\COVID-19_Весна_2021\ConsoleChisMethod\ConsoleChisMethod\bin\Debug\netcoreapp3.1\ConsoleChisMethod.dll
+D:\PKS\COVID-19_Весна_2021\ConsoleChisMethod\ConsoleChisMethod\bin\Debug\netcoreapp3.1\ConsoleChisMethod.pdb
+D:\PKS\COVID-19_Весна_2021\ConsoleChisMethod\ConsoleChisMethod\obj\Debug\netcoreapp3.1\ConsoleChisMethod.dll
+D:\PKS\COVID-19_Весна_2021\ConsoleChisMethod\ConsoleChisMethod\obj\Debug\netcoreapp3.1\ConsoleChisMethod.pdb
+D:\PKS\COVID-19_Весна_2021\ConsoleChisMethod\ConsoleChisMethod\obj\Debug\netcoreapp3.1\ConsoleChisMethod.genruntimeconfig.cache
+C:\Users\БЛэкс\Desktop\Учеба\4 семестр\Численые методы\ConsoleChisMethod\ConsoleChisMethod\bin\Debug\netcoreapp3.1\ConsoleChisMethod.exe
+C:\Users\БЛэкс\Desktop\Учеба\4 семестр\Численые методы\ConsoleChisMethod\ConsoleChisMethod\bin\Debug\netcoreapp3.1\ConsoleChisMethod.deps.json
+C:\Users\БЛэкс\Desktop\Учеба\4 семестр\Численые методы\ConsoleChisMethod\ConsoleChisMethod\bin\Debug\netcoreapp3.1\ConsoleChisMethod.runtimeconfig.json
+C:\Users\БЛэкс\Desktop\Учеба\4 семестр\Численые методы\ConsoleChisMethod\ConsoleChisMethod\bin\Debug\netcoreapp3.1\ConsoleChisMethod.runtimeconfig.dev.json
+C:\Users\БЛэкс\Desktop\Учеба\4 семестр\Численые методы\ConsoleChisMethod\ConsoleChisMethod\bin\Debug\netcoreapp3.1\ConsoleChisMethod.dll
+C:\Users\БЛэкс\Desktop\Учеба\4 семестр\Численые методы\ConsoleChisMethod\ConsoleChisMethod\bin\Debug\netcoreapp3.1\ConsoleChisMethod.pdb
+C:\Users\БЛэкс\Desktop\Учеба\4 семестр\Численые методы\ConsoleChisMethod\ConsoleChisMethod\obj\Debug\netcoreapp3.1\ConsoleChisMethod.csprojAssemblyReference.cache
+C:\Users\БЛэкс\Desktop\Учеба\4 семестр\Численые методы\ConsoleChisMethod\ConsoleChisMethod\obj\Debug\netcoreapp3.1\ConsoleChisMethod.AssemblyInfoInputs.cache
+C:\Users\БЛэкс\Desktop\Учеба\4 семестр\Численые методы\ConsoleChisMethod\ConsoleChisMethod\obj\Debug\netcoreapp3.1\ConsoleChisMethod.AssemblyInfo.cs
+C:\Users\БЛэкс\Desktop\Учеба\4 семестр\Численые методы\ConsoleChisMethod\ConsoleChisMethod\obj\Debug\netcoreapp3.1\ConsoleChisMethod.csproj.CoreCompileInputs.cache
+C:\Users\БЛэкс\Desktop\Учеба\4 семестр\Численые методы\ConsoleChisMethod\ConsoleChisMethod\obj\Debug\netcoreapp3.1\ConsoleChisMethod.dll
+C:\Users\БЛэкс\Desktop\Учеба\4 семестр\Численые методы\ConsoleChisMethod\ConsoleChisMethod\obj\Debug\netcoreapp3.1\ConsoleChisMethod.pdb
+C:\Users\БЛэкс\Desktop\Учеба\4 семестр\Численые методы\ConsoleChisMethod\ConsoleChisMethod\obj\Debug\netcoreapp3.1\ConsoleChisMethod.genruntimeconfig.cache
+C:\Users\БЛэкс\Desktop\Учеба\4 семестр\Proga\Consol\ConsoleChisMethod\ConsoleChisMethod\bin\Debug\netcoreapp3.1\ConsoleChisMethod.exe
+C:\Users\БЛэкс\Desktop\Учеба\4 семестр\Proga\Consol\ConsoleChisMethod\ConsoleChisMethod\bin\Debug\netcoreapp3.1\ConsoleChisMethod.deps.json
+C:\Users\БЛэкс\Desktop\Учеба\4 семестр\Proga\Consol\ConsoleChisMethod\ConsoleChisMethod\bin\Debug\netcoreapp3.1\ConsoleChisMethod.runtimeconfig.json
+C:\Users\БЛэкс\Desktop\Учеба\4 семестр\Proga\Consol\ConsoleChisMethod\ConsoleChisMethod\bin\Debug\netcoreapp3.1\ConsoleChisMethod.runtimeconfig.dev.json
+C:\Users\БЛэкс\Desktop\Учеба\4 семестр\Proga\Consol\ConsoleChisMethod\ConsoleChisMethod\bin\Debug\netcoreapp3.1\ConsoleChisMethod.dll
+C:\Users\БЛэкс\Desktop\Учеба\4 семестр\Proga\Consol\ConsoleChisMethod\ConsoleChisMethod\bin\Debug\netcoreapp3.1\ConsoleChisMethod.pdb
+C:\Users\БЛэкс\Desktop\Учеба\4 семестр\Proga\Consol\ConsoleChisMethod\ConsoleChisMethod\obj\Debug\netcoreapp3.1\ConsoleChisMethod.csprojAssemblyReference.cache
+C:\Users\БЛэкс\Desktop\Учеба\4 семестр\Proga\Consol\ConsoleChisMethod\ConsoleChisMethod\obj\Debug\netcoreapp3.1\ConsoleChisMethod.AssemblyInfoInputs.cache
+C:\Users\БЛэкс\Desktop\Учеба\4 семестр\Proga\Consol\ConsoleChisMethod\ConsoleChisMethod\obj\Debug\netcoreapp3.1\ConsoleChisMethod.AssemblyInfo.cs
+C:\Users\БЛэкс\Desktop\Учеба\4 семестр\Proga\Consol\ConsoleChisMethod\ConsoleChisMethod\obj\Debug\netcoreapp3.1\ConsoleChisMethod.csproj.CoreCompileInputs.cache
+C:\Users\БЛэкс\Desktop\Учеба\4 семестр\Proga\Consol\ConsoleChisMethod\ConsoleChisMethod\obj\Debug\netcoreapp3.1\ConsoleChisMethod.dll
+C:\Users\БЛэкс\Desktop\Учеба\4 семестр\Proga\Consol\ConsoleChisMethod\ConsoleChisMethod\obj\Debug\netcoreapp3.1\ConsoleChisMethod.pdb
+C:\Users\БЛэкс\Desktop\Учеба\4 семестр\Proga\Consol\ConsoleChisMethod\ConsoleChisMethod\obj\Debug\netcoreapp3.1\ConsoleChisMethod.genruntimeconfig.cache
+C:\Users\Год\Desktop\consol\ConsoleChisMethod\ConsoleChisMethod\bin\Debug\netcoreapp3.1\ConsoleChisMethod.exe
+C:\Users\Год\Desktop\consol\ConsoleChisMethod\ConsoleChisMethod\bin\Debug\netcoreapp3.1\ConsoleChisMethod.deps.json
+C:\Users\Год\Desktop\consol\ConsoleChisMethod\ConsoleChisMethod\bin\Debug\netcoreapp3.1\ConsoleChisMethod.runtimeconfig.json
+C:\Users\Год\Desktop\consol\ConsoleChisMethod\ConsoleChisMethod\bin\Debug\netcoreapp3.1\ConsoleChisMethod.runtimeconfig.dev.json
+C:\Users\Год\Desktop\consol\ConsoleChisMethod\ConsoleChisMethod\bin\Debug\netcoreapp3.1\ConsoleChisMethod.dll
+C:\Users\Год\Desktop\consol\ConsoleChisMethod\ConsoleChisMethod\bin\Debug\netcoreapp3.1\ConsoleChisMethod.pdb
+C:\Users\Год\Desktop\consol\ConsoleChisMethod\ConsoleChisMethod\obj\Debug\netcoreapp3.1\ConsoleChisMethod.csprojAssemblyReference.cache
+C:\Users\Год\Desktop\consol\ConsoleChisMethod\ConsoleChisMethod\obj\Debug\netcoreapp3.1\ConsoleChisMethod.AssemblyInfoInputs.cache
+C:\Users\Год\Desktop\consol\ConsoleChisMethod\ConsoleChisMethod\obj\Debug\netcoreapp3.1\ConsoleChisMethod.AssemblyInfo.cs
+C:\Users\Год\Desktop\consol\ConsoleChisMethod\ConsoleChisMethod\obj\Debug\netcoreapp3.1\ConsoleChisMethod.csproj.CoreCompileInputs.cache
+C:\Users\Год\Desktop\consol\ConsoleChisMethod\ConsoleChisMethod\obj\Debug\netcoreapp3.1\ConsoleChisMethod.dll
+C:\Users\Год\Desktop\consol\ConsoleChisMethod\ConsoleChisMethod\obj\Debug\netcoreapp3.1\ConsoleChisMethod.pdb
+C:\Users\Год\Desktop\consol\ConsoleChisMethod\ConsoleChisMethod\obj\Debug\netcoreapp3.1\ConsoleChisMethod.genruntimeconfig.cache
+C:\Users\Год\Desktop\consol\Старостин 4217 Численные\ConsoleChisMethod\ConsoleChisMethod\bin\Debug\netcoreapp3.1\ConsoleChisMethod.exe
+C:\Users\Год\Desktop\consol\Старостин 4217 Численные\ConsoleChisMethod\ConsoleChisMethod\bin\Debug\netcoreapp3.1\ConsoleChisMethod.deps.json
+C:\Users\Год\Desktop\consol\Старостин 4217 Численные\ConsoleChisMethod\ConsoleChisMethod\bin\Debug\netcoreapp3.1\ConsoleChisMethod.runtimeconfig.json
+C:\Users\Год\Desktop\consol\Старостин 4217 Численные\ConsoleChisMethod\ConsoleChisMethod\bin\Debug\netcoreapp3.1\ConsoleChisMethod.runtimeconfig.dev.json
+C:\Users\Год\Desktop\consol\Старостин 4217 Численные\ConsoleChisMethod\ConsoleChisMethod\bin\Debug\netcoreapp3.1\ConsoleChisMethod.dll
+C:\Users\Год\Desktop\consol\Старостин 4217 Численные\ConsoleChisMethod\ConsoleChisMethod\bin\Debug\netcoreapp3.1\ConsoleChisMethod.pdb
+C:\Users\Год\Desktop\consol\Старостин 4217 Численные\ConsoleChisMethod\ConsoleChisMethod\obj\Debug\netcoreapp3.1\ConsoleChisMethod.csprojAssemblyReference.cache
+C:\Users\Год\Desktop\consol\Старостин 4217 Численные\ConsoleChisMethod\ConsoleChisMethod\obj\Debug\netcoreapp3.1\ConsoleChisMethod.AssemblyInfoInputs.cache
+C:\Users\Год\Desktop\consol\Старостин 4217 Численные\ConsoleChisMethod\ConsoleChisMethod\obj\Debug\netcoreapp3.1\ConsoleChisMethod.AssemblyInfo.cs
+C:\Users\Год\Desktop\consol\Старостин 4217 Численные\ConsoleChisMethod\ConsoleChisMethod\obj\Debug\netcoreapp3.1\ConsoleChisMethod.csproj.CoreCompileInputs.cache
+C:\Users\Год\Desktop\consol\Старостин 4217 Численные\ConsoleChisMethod\ConsoleChisMethod\obj\Debug\netcoreapp3.1\ConsoleChisMethod.dll
+C:\Users\Год\Desktop\consol\Старостин 4217 Численные\ConsoleChisMethod\ConsoleChisMethod\obj\Debug\netcoreapp3.1\ConsoleChisMethod.pdb
+C:\Users\Год\Desktop\consol\Старостин 4217 Численные\ConsoleChisMethod\ConsoleChisMethod\obj\Debug\netcoreapp3.1\ConsoleChisMethod.genruntimeconfig.cache
+E:\COVID-19_Весна_2021\4217\22.05\ConsoleChisMethod\ConsoleChisMethod\obj\Debug\netcoreapp3.1\ConsoleChisMethod.csprojAssemblyReference.cache
+E:\COVID-19_Весна_2021\4217\22.05\ConsoleChisMethod\ConsoleChisMethod\obj\Debug\netcoreapp3.1\ConsoleChisMethod.AssemblyInfoInputs.cache
+E:\COVID-19_Весна_2021\4217\22.05\ConsoleChisMethod\ConsoleChisMethod\obj\Debug\netcoreapp3.1\ConsoleChisMethod.AssemblyInfo.cs
+E:\COVID-19_Весна_2021\4217\22.05\ConsoleChisMethod\ConsoleChisMethod\obj\Debug\netcoreapp3.1\ConsoleChisMethod.csproj.CoreCompileInputs.cache
+E:\COVID-19_Весна_2021\4217\22.05\ConsoleChisMethod\ConsoleChisMethod\obj\Debug\netcoreapp3.1\ConsoleChisMethod.dll
+E:\COVID-19_Весна_2021\4217\22.05\ConsoleChisMethod\ConsoleChisMethod\obj\Debug\netcoreapp3.1\ConsoleChisMethod.pdb
+E:\COVID-19_Весна_2021\4217\22.05\ConsoleChisMethod\ConsoleChisMethod\bin\Debug\netcoreapp3.1\ConsoleChisMethod.exe
+E:\COVID-19_Весна_2021\4217\22.05\ConsoleChisMethod\ConsoleChisMethod\bin\Debug\netcoreapp3.1\ConsoleChisMethod.deps.json
+E:\COVID-19_Весна_2021\4217\22.05\ConsoleChisMethod\ConsoleChisMethod\bin\Debug\netcoreapp3.1\ConsoleChisMethod.runtimeconfig.json
+E:\COVID-19_Весна_2021\4217\22.05\ConsoleChisMethod\ConsoleChisMethod\bin\Debug\netcoreapp3.1\ConsoleChisMethod.runtimeconfig.dev.json
+E:\COVID-19_Весна_2021\4217\22.05\ConsoleChisMethod\ConsoleChisMethod\bin\Debug\netcoreapp3.1\ConsoleChisMethod.dll
+E:\COVID-19_Весна_2021\4217\22.05\ConsoleChisMethod\ConsoleChisMethod\bin\Debug\netcoreapp3.1\ConsoleChisMethod.pdb
+E:\COVID-19_Весна_2021\4217\22.05\ConsoleChisMethod\ConsoleChisMethod\obj\Debug\netcoreapp3.1\ConsoleChisMethod.genruntimeconfig.cache
+C:\Users\БЛэкс\Desktop\13 05\ConsoleChisMethod\ConsoleChisMethod\bin\Debug\netcoreapp3.1\ConsoleChisMethod.exe
+C:\Users\БЛэкс\Desktop\13 05\ConsoleChisMethod\ConsoleChisMethod\bin\Debug\netcoreapp3.1\ConsoleChisMethod.deps.json
+C:\Users\БЛэкс\Desktop\13 05\ConsoleChisMethod\ConsoleChisMethod\bin\Debug\netcoreapp3.1\ConsoleChisMethod.runtimeconfig.json
+C:\Users\БЛэкс\Desktop\13 05\ConsoleChisMethod\ConsoleChisMethod\bin\Debug\netcoreapp3.1\ConsoleChisMethod.runtimeconfig.dev.json
+C:\Users\БЛэкс\Desktop\13 05\ConsoleChisMethod\ConsoleChisMethod\bin\Debug\netcoreapp3.1\ConsoleChisMethod.dll
+C:\Users\БЛэкс\Desktop\13 05\ConsoleChisMethod\ConsoleChisMethod\bin\Debug\netcoreapp3.1\ConsoleChisMethod.pdb
+C:\Users\БЛэкс\Desktop\13 05\ConsoleChisMethod\ConsoleChisMethod\obj\Debug\netcoreapp3.1\ConsoleChisMethod.csprojAssemblyReference.cache
+C:\Users\БЛэкс\Desktop\13 05\ConsoleChisMethod\ConsoleChisMethod\obj\Debug\netcoreapp3.1\ConsoleChisMethod.AssemblyInfoInputs.cache
+C:\Users\БЛэкс\Desktop\13 05\ConsoleChisMethod\ConsoleChisMethod\obj\Debug\netcoreapp3.1\ConsoleChisMethod.AssemblyInfo.cs
+C:\Users\БЛэкс\Desktop\13 05\ConsoleChisMethod\ConsoleChisMethod\obj\Debug\netcoreapp3.1\ConsoleChisMethod.csproj.CoreCompileInputs.cache
+C:\Users\БЛэкс\Desktop\13 05\ConsoleChisMethod\ConsoleChisMethod\obj\Debug\netcoreapp3.1\ConsoleChisMethod.dll
+C:\Users\БЛэкс\Desktop\13 05\ConsoleChisMethod\ConsoleChisMethod\obj\Debug\netcoreapp3.1\ConsoleChisMethod.pdb
+C:\Users\БЛэкс\Desktop\13 05\ConsoleChisMethod\ConsoleChisMethod\obj\Debug\netcoreapp3.1\ConsoleChisMethod.genruntimeconfig.cache

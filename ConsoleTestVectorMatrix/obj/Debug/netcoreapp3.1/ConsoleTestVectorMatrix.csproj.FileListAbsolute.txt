@@ -1,0 +1,91 @@
+E:\COVID-19_Весна_2021\МетодМатериалы\ConsoleTestVectorMatrix\ConsoleTestVectorMatrix\bin\Debug\netcoreapp3.1\ConsoleTestVectorMatrix.exe
+E:\COVID-19_Весна_2021\МетодМатериалы\ConsoleTestVectorMatrix\ConsoleTestVectorMatrix\bin\Debug\netcoreapp3.1\ConsoleTestVectorMatrix.deps.json
+E:\COVID-19_Весна_2021\МетодМатериалы\ConsoleTestVectorMatrix\ConsoleTestVectorMatrix\bin\Debug\netcoreapp3.1\ConsoleTestVectorMatrix.runtimeconfig.json
+E:\COVID-19_Весна_2021\МетодМатериалы\ConsoleTestVectorMatrix\ConsoleTestVectorMatrix\bin\Debug\netcoreapp3.1\ConsoleTestVectorMatrix.runtimeconfig.dev.json
+E:\COVID-19_Весна_2021\МетодМатериалы\ConsoleTestVectorMatrix\ConsoleTestVectorMatrix\bin\Debug\netcoreapp3.1\ConsoleTestVectorMatrix.dll
+E:\COVID-19_Весна_2021\МетодМатериалы\ConsoleTestVectorMatrix\ConsoleTestVectorMatrix\bin\Debug\netcoreapp3.1\ConsoleTestVectorMatrix.pdb
+E:\COVID-19_Весна_2021\МетодМатериалы\ConsoleTestVectorMatrix\ConsoleTestVectorMatrix\obj\Debug\netcoreapp3.1\ConsoleTestVectorMatrix.csprojAssemblyReference.cache
+E:\COVID-19_Весна_2021\МетодМатериалы\ConsoleTestVectorMatrix\ConsoleTestVectorMatrix\obj\Debug\netcoreapp3.1\ConsoleTestVectorMatrix.AssemblyInfoInputs.cache
+E:\COVID-19_Весна_2021\МетодМатериалы\ConsoleTestVectorMatrix\ConsoleTestVectorMatrix\obj\Debug\netcoreapp3.1\ConsoleTestVectorMatrix.AssemblyInfo.cs
+E:\COVID-19_Весна_2021\МетодМатериалы\ConsoleTestVectorMatrix\ConsoleTestVectorMatrix\obj\Debug\netcoreapp3.1\ConsoleTestVectorMatrix.csproj.CoreCompileInputs.cache
+E:\COVID-19_Весна_2021\МетодМатериалы\ConsoleTestVectorMatrix\ConsoleTestVectorMatrix\obj\Debug\netcoreapp3.1\ConsoleTestVectorMatrix.dll
+E:\COVID-19_Весна_2021\МетодМатериалы\ConsoleTestVectorMatrix\ConsoleTestVectorMatrix\obj\Debug\netcoreapp3.1\ConsoleTestVectorMatrix.pdb
+E:\COVID-19_Весна_2021\МетодМатериалы\ConsoleTestVectorMatrix\ConsoleTestVectorMatrix\obj\Debug\netcoreapp3.1\ConsoleTestVectorMatrix.genruntimeconfig.cache
+C:\Users\Год\Desktop\consol\ConsoleTestVectorMatrix\ConsoleTestVectorMatrix\bin\Debug\netcoreapp3.1\ConsoleTestVectorMatrix.exe
+C:\Users\Год\Desktop\consol\ConsoleTestVectorMatrix\ConsoleTestVectorMatrix\bin\Debug\netcoreapp3.1\ConsoleTestVectorMatrix.deps.json
+C:\Users\Год\Desktop\consol\ConsoleTestVectorMatrix\ConsoleTestVectorMatrix\bin\Debug\netcoreapp3.1\ConsoleTestVectorMatrix.runtimeconfig.json
+C:\Users\Год\Desktop\consol\ConsoleTestVectorMatrix\ConsoleTestVectorMatrix\bin\Debug\netcoreapp3.1\ConsoleTestVectorMatrix.runtimeconfig.dev.json
+C:\Users\Год\Desktop\consol\ConsoleTestVectorMatrix\ConsoleTestVectorMatrix\bin\Debug\netcoreapp3.1\ConsoleTestVectorMatrix.dll
+C:\Users\Год\Desktop\consol\ConsoleTestVectorMatrix\ConsoleTestVectorMatrix\bin\Debug\netcoreapp3.1\ConsoleTestVectorMatrix.pdb
+C:\Users\Год\Desktop\consol\ConsoleTestVectorMatrix\ConsoleTestVectorMatrix\obj\Debug\netcoreapp3.1\ConsoleTestVectorMatrix.csprojAssemblyReference.cache
+C:\Users\Год\Desktop\consol\ConsoleTestVectorMatrix\ConsoleTestVectorMatrix\obj\Debug\netcoreapp3.1\ConsoleTestVectorMatrix.AssemblyInfoInputs.cache
+C:\Users\Год\Desktop\consol\ConsoleTestVectorMatrix\ConsoleTestVectorMatrix\obj\Debug\netcoreapp3.1\ConsoleTestVectorMatrix.AssemblyInfo.cs
+C:\Users\Год\Desktop\consol\ConsoleTestVectorMatrix\ConsoleTestVectorMatrix\obj\Debug\netcoreapp3.1\ConsoleTestVectorMatrix.csproj.CoreCompileInputs.cache
+C:\Users\Год\Desktop\consol\ConsoleTestVectorMatrix\ConsoleTestVectorMatrix\obj\Debug\netcoreapp3.1\ConsoleTestVectorMatrix.dll
+C:\Users\Год\Desktop\consol\ConsoleTestVectorMatrix\ConsoleTestVectorMatrix\obj\Debug\netcoreapp3.1\ConsoleTestVectorMatrix.pdb
+C:\Users\Год\Desktop\consol\ConsoleTestVectorMatrix\ConsoleTestVectorMatrix\obj\Debug\netcoreapp3.1\ConsoleTestVectorMatrix.genruntimeconfig.cache
+C:\Users\Год\Desktop\consol\Старостин 4217 Численные\ConsoleTestVectorMatrix\ConsoleTestVectorMatrix\bin\Debug\netcoreapp3.1\ConsoleTestVectorMatrix.exe
+C:\Users\Год\Desktop\consol\Старостин 4217 Численные\ConsoleTestVectorMatrix\ConsoleTestVectorMatrix\bin\Debug\netcoreapp3.1\ConsoleTestVectorMatrix.deps.json
+C:\Users\Год\Desktop\consol\Старостин 4217 Численные\ConsoleTestVectorMatrix\ConsoleTestVectorMatrix\bin\Debug\netcoreapp3.1\ConsoleTestVectorMatrix.runtimeconfig.json
+C:\Users\Год\Desktop\consol\Старостин 4217 Численные\ConsoleTestVectorMatrix\ConsoleTestVectorMatrix\bin\Debug\netcoreapp3.1\ConsoleTestVectorMatrix.runtimeconfig.dev.json
+C:\Users\Год\Desktop\consol\Старостин 4217 Численные\ConsoleTestVectorMatrix\ConsoleTestVectorMatrix\bin\Debug\netcoreapp3.1\ConsoleTestVectorMatrix.dll
+C:\Users\Год\Desktop\consol\Старостин 4217 Численные\ConsoleTestVectorMatrix\ConsoleTestVectorMatrix\bin\Debug\netcoreapp3.1\ConsoleTestVectorMatrix.pdb
+C:\Users\Год\Desktop\consol\Старостин 4217 Численные\ConsoleTestVectorMatrix\ConsoleTestVectorMatrix\obj\Debug\netcoreapp3.1\ConsoleTestVectorMatrix.csprojAssemblyReference.cache
+C:\Users\Год\Desktop\consol\Старостин 4217 Численные\ConsoleTestVectorMatrix\ConsoleTestVectorMatrix\obj\Debug\netcoreapp3.1\ConsoleTestVectorMatrix.AssemblyInfoInputs.cache
+C:\Users\Год\Desktop\consol\Старостин 4217 Численные\ConsoleTestVectorMatrix\ConsoleTestVectorMatrix\obj\Debug\netcoreapp3.1\ConsoleTestVectorMatrix.AssemblyInfo.cs
+C:\Users\Год\Desktop\consol\Старостин 4217 Численные\ConsoleTestVectorMatrix\ConsoleTestVectorMatrix\obj\Debug\netcoreapp3.1\ConsoleTestVectorMatrix.csproj.CoreCompileInputs.cache
+C:\Users\Год\Desktop\consol\Старостин 4217 Численные\ConsoleTestVectorMatrix\ConsoleTestVectorMatrix\obj\Debug\netcoreapp3.1\ConsoleTestVectorMatrix.dll
+C:\Users\Год\Desktop\consol\Старостин 4217 Численные\ConsoleTestVectorMatrix\ConsoleTestVectorMatrix\obj\Debug\netcoreapp3.1\ConsoleTestVectorMatrix.pdb
+C:\Users\Год\Desktop\consol\Старостин 4217 Численные\ConsoleTestVectorMatrix\ConsoleTestVectorMatrix\obj\Debug\netcoreapp3.1\ConsoleTestVectorMatrix.genruntimeconfig.cache
+C:\Users\Год\Desktop\4sem\Старостин 4217 Численные\ConsoleTestVectorMatrix\ConsoleTestVectorMatrix\bin\Debug\netcoreapp3.1\ConsoleTestVectorMatrix.exe
+C:\Users\Год\Desktop\4sem\Старостин 4217 Численные\ConsoleTestVectorMatrix\ConsoleTestVectorMatrix\bin\Debug\netcoreapp3.1\ConsoleTestVectorMatrix.deps.json
+C:\Users\Год\Desktop\4sem\Старостин 4217 Численные\ConsoleTestVectorMatrix\ConsoleTestVectorMatrix\bin\Debug\netcoreapp3.1\ConsoleTestVectorMatrix.runtimeconfig.json
+C:\Users\Год\Desktop\4sem\Старостин 4217 Численные\ConsoleTestVectorMatrix\ConsoleTestVectorMatrix\bin\Debug\netcoreapp3.1\ConsoleTestVectorMatrix.runtimeconfig.dev.json
+C:\Users\Год\Desktop\4sem\Старостин 4217 Численные\ConsoleTestVectorMatrix\ConsoleTestVectorMatrix\bin\Debug\netcoreapp3.1\ConsoleTestVectorMatrix.dll
+C:\Users\Год\Desktop\4sem\Старостин 4217 Численные\ConsoleTestVectorMatrix\ConsoleTestVectorMatrix\bin\Debug\netcoreapp3.1\ConsoleTestVectorMatrix.pdb
+C:\Users\Год\Desktop\4sem\Старостин 4217 Численные\ConsoleTestVectorMatrix\ConsoleTestVectorMatrix\obj\Debug\netcoreapp3.1\ConsoleTestVectorMatrix.csprojAssemblyReference.cache
+C:\Users\Год\Desktop\4sem\Старостин 4217 Численные\ConsoleTestVectorMatrix\ConsoleTestVectorMatrix\obj\Debug\netcoreapp3.1\ConsoleTestVectorMatrix.AssemblyInfoInputs.cache
+C:\Users\Год\Desktop\4sem\Старостин 4217 Численные\ConsoleTestVectorMatrix\ConsoleTestVectorMatrix\obj\Debug\netcoreapp3.1\ConsoleTestVectorMatrix.AssemblyInfo.cs
+C:\Users\Год\Desktop\4sem\Старостин 4217 Численные\ConsoleTestVectorMatrix\ConsoleTestVectorMatrix\obj\Debug\netcoreapp3.1\ConsoleTestVectorMatrix.csproj.CoreCompileInputs.cache
+C:\Users\Год\Desktop\4sem\Старостин 4217 Численные\ConsoleTestVectorMatrix\ConsoleTestVectorMatrix\obj\Debug\netcoreapp3.1\ConsoleTestVectorMatrix.dll
+C:\Users\Год\Desktop\4sem\Старостин 4217 Численные\ConsoleTestVectorMatrix\ConsoleTestVectorMatrix\obj\Debug\netcoreapp3.1\ConsoleTestVectorMatrix.pdb
+C:\Users\Год\Desktop\4sem\Старостин 4217 Численные\ConsoleTestVectorMatrix\ConsoleTestVectorMatrix\obj\Debug\netcoreapp3.1\ConsoleTestVectorMatrix.genruntimeconfig.cache
+C:\Users\БЛэкс\Desktop\новый\Старостин 4217 Численные (1)\ConsoleTestVectorMatrix\ConsoleTestVectorMatrix\obj\Debug\netcoreapp3.1\ConsoleTestVectorMatrix.csprojAssemblyReference.cache
+C:\Users\БЛэкс\Desktop\новый\Старостин 4217 Численные (1)\ConsoleTestVectorMatrix\ConsoleTestVectorMatrix\obj\Debug\netcoreapp3.1\ConsoleTestVectorMatrix.AssemblyInfoInputs.cache
+C:\Users\БЛэкс\Desktop\новый\Старостин 4217 Численные (1)\ConsoleTestVectorMatrix\ConsoleTestVectorMatrix\obj\Debug\netcoreapp3.1\ConsoleTestVectorMatrix.AssemblyInfo.cs
+C:\Users\БЛэкс\Desktop\новый\Старостин 4217 Численные (1)\ConsoleTestVectorMatrix\ConsoleTestVectorMatrix\obj\Debug\netcoreapp3.1\ConsoleTestVectorMatrix.csproj.CoreCompileInputs.cache
+C:\Users\БЛэкс\Desktop\новый\Старостин 4217 Численные (1)\ConsoleTestVectorMatrix\ConsoleTestVectorMatrix\obj\Debug\netcoreapp3.1\ConsoleTestVectorMatrix.dll
+C:\Users\БЛэкс\Desktop\новый\Старостин 4217 Численные (1)\ConsoleTestVectorMatrix\ConsoleTestVectorMatrix\obj\Debug\netcoreapp3.1\ConsoleTestVectorMatrix.pdb
+C:\Users\БЛэкс\Desktop\новый\Старостин 4217 Численные (1)\ConsoleTestVectorMatrix\ConsoleTestVectorMatrix\bin\Debug\netcoreapp3.1\ConsoleTestVectorMatrix.exe
+C:\Users\БЛэкс\Desktop\новый\Старостин 4217 Численные (1)\ConsoleTestVectorMatrix\ConsoleTestVectorMatrix\bin\Debug\netcoreapp3.1\ConsoleTestVectorMatrix.deps.json
+C:\Users\БЛэкс\Desktop\новый\Старостин 4217 Численные (1)\ConsoleTestVectorMatrix\ConsoleTestVectorMatrix\bin\Debug\netcoreapp3.1\ConsoleTestVectorMatrix.runtimeconfig.json
+C:\Users\БЛэкс\Desktop\новый\Старостин 4217 Численные (1)\ConsoleTestVectorMatrix\ConsoleTestVectorMatrix\bin\Debug\netcoreapp3.1\ConsoleTestVectorMatrix.runtimeconfig.dev.json
+C:\Users\БЛэкс\Desktop\новый\Старостин 4217 Численные (1)\ConsoleTestVectorMatrix\ConsoleTestVectorMatrix\bin\Debug\netcoreapp3.1\ConsoleTestVectorMatrix.dll
+C:\Users\БЛэкс\Desktop\новый\Старостин 4217 Численные (1)\ConsoleTestVectorMatrix\ConsoleTestVectorMatrix\bin\Debug\netcoreapp3.1\ConsoleTestVectorMatrix.pdb
+C:\Users\БЛэкс\Desktop\новый\Старостин 4217 Численные (1)\ConsoleTestVectorMatrix\ConsoleTestVectorMatrix\obj\Debug\netcoreapp3.1\ConsoleTestVectorMatrix.genruntimeconfig.cache
+C:\Users\Год\Desktop\4sem\Старостин 4217 Численные (1) (1)\ConsoleTestVectorMatrix\ConsoleTestVectorMatrix\bin\Debug\netcoreapp3.1\ConsoleTestVectorMatrix.exe
+C:\Users\Год\Desktop\4sem\Старостин 4217 Численные (1) (1)\ConsoleTestVectorMatrix\ConsoleTestVectorMatrix\bin\Debug\netcoreapp3.1\ConsoleTestVectorMatrix.deps.json
+C:\Users\Год\Desktop\4sem\Старостин 4217 Численные (1) (1)\ConsoleTestVectorMatrix\ConsoleTestVectorMatrix\bin\Debug\netcoreapp3.1\ConsoleTestVectorMatrix.runtimeconfig.json
+C:\Users\Год\Desktop\4sem\Старостин 4217 Численные (1) (1)\ConsoleTestVectorMatrix\ConsoleTestVectorMatrix\bin\Debug\netcoreapp3.1\ConsoleTestVectorMatrix.runtimeconfig.dev.json
+C:\Users\Год\Desktop\4sem\Старостин 4217 Численные (1) (1)\ConsoleTestVectorMatrix\ConsoleTestVectorMatrix\bin\Debug\netcoreapp3.1\ConsoleTestVectorMatrix.dll
+C:\Users\Год\Desktop\4sem\Старостин 4217 Численные (1) (1)\ConsoleTestVectorMatrix\ConsoleTestVectorMatrix\bin\Debug\netcoreapp3.1\ConsoleTestVectorMatrix.pdb
+C:\Users\Год\Desktop\4sem\Старостин 4217 Численные (1) (1)\ConsoleTestVectorMatrix\ConsoleTestVectorMatrix\obj\Debug\netcoreapp3.1\ConsoleTestVectorMatrix.csprojAssemblyReference.cache
+C:\Users\Год\Desktop\4sem\Старостин 4217 Численные (1) (1)\ConsoleTestVectorMatrix\ConsoleTestVectorMatrix\obj\Debug\netcoreapp3.1\ConsoleTestVectorMatrix.AssemblyInfoInputs.cache
+C:\Users\Год\Desktop\4sem\Старостин 4217 Численные (1) (1)\ConsoleTestVectorMatrix\ConsoleTestVectorMatrix\obj\Debug\netcoreapp3.1\ConsoleTestVectorMatrix.AssemblyInfo.cs
+C:\Users\Год\Desktop\4sem\Старостин 4217 Численные (1) (1)\ConsoleTestVectorMatrix\ConsoleTestVectorMatrix\obj\Debug\netcoreapp3.1\ConsoleTestVectorMatrix.csproj.CoreCompileInputs.cache
+C:\Users\Год\Desktop\4sem\Старостин 4217 Численные (1) (1)\ConsoleTestVectorMatrix\ConsoleTestVectorMatrix\obj\Debug\netcoreapp3.1\ConsoleTestVectorMatrix.dll
+C:\Users\Год\Desktop\4sem\Старостин 4217 Численные (1) (1)\ConsoleTestVectorMatrix\ConsoleTestVectorMatrix\obj\Debug\netcoreapp3.1\ConsoleTestVectorMatrix.pdb
+C:\Users\Год\Desktop\4sem\Старостин 4217 Численные (1) (1)\ConsoleTestVectorMatrix\ConsoleTestVectorMatrix\obj\Debug\netcoreapp3.1\ConsoleTestVectorMatrix.genruntimeconfig.cache
+C:\Users\БЛэкс\Desktop\13 05\ConsoleTestVectorMatrix\ConsoleTestVectorMatrix\obj\Debug\netcoreapp3.1\ConsoleTestVectorMatrix.csprojAssemblyReference.cache
+C:\Users\БЛэкс\Desktop\13 05\ConsoleTestVectorMatrix\ConsoleTestVectorMatrix\obj\Debug\netcoreapp3.1\ConsoleTestVectorMatrix.AssemblyInfoInputs.cache
+C:\Users\БЛэкс\Desktop\13 05\ConsoleTestVectorMatrix\ConsoleTestVectorMatrix\obj\Debug\netcoreapp3.1\ConsoleTestVectorMatrix.AssemblyInfo.cs
+C:\Users\БЛэкс\Desktop\13 05\ConsoleTestVectorMatrix\ConsoleTestVectorMatrix\obj\Debug\netcoreapp3.1\ConsoleTestVectorMatrix.csproj.CoreCompileInputs.cache
+C:\Users\БЛэкс\Desktop\13 05\ConsoleTestVectorMatrix\ConsoleTestVectorMatrix\obj\Debug\netcoreapp3.1\ConsoleTestVectorMatrix.dll
+C:\Users\БЛэкс\Desktop\13 05\ConsoleTestVectorMatrix\ConsoleTestVectorMatrix\obj\Debug\netcoreapp3.1\ConsoleTestVectorMatrix.pdb
+C:\Users\БЛэкс\Desktop\13 05\ConsoleTestVectorMatrix\ConsoleTestVectorMatrix\bin\Debug\netcoreapp3.1\ConsoleTestVectorMatrix.exe
+C:\Users\БЛэкс\Desktop\13 05\ConsoleTestVectorMatrix\ConsoleTestVectorMatrix\bin\Debug\netcoreapp3.1\ConsoleTestVectorMatrix.deps.json
+C:\Users\БЛэкс\Desktop\13 05\ConsoleTestVectorMatrix\ConsoleTestVectorMatrix\bin\Debug\netcoreapp3.1\ConsoleTestVectorMatrix.runtimeconfig.json
+C:\Users\БЛэкс\Desktop\13 05\ConsoleTestVectorMatrix\ConsoleTestVectorMatrix\bin\Debug\netcoreapp3.1\ConsoleTestVectorMatrix.runtimeconfig.dev.json
+C:\Users\БЛэкс\Desktop\13 05\ConsoleTestVectorMatrix\ConsoleTestVectorMatrix\bin\Debug\netcoreapp3.1\ConsoleTestVectorMatrix.dll
+C:\Users\БЛэкс\Desktop\13 05\ConsoleTestVectorMatrix\ConsoleTestVectorMatrix\bin\Debug\netcoreapp3.1\ConsoleTestVectorMatrix.pdb
+C:\Users\БЛэкс\Desktop\13 05\ConsoleTestVectorMatrix\ConsoleTestVectorMatrix\obj\Debug\netcoreapp3.1\ConsoleTestVectorMatrix.genruntimeconfig.cache
